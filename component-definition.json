@@ -347,15 +347,7 @@
                 "template": {
                   "name": "Hero Lifestyle",
                   "model": "hero-lifestyle",
-                  "columns": [
-                    [
-                      "image",
-                      "imageAlt"
-                    ],
-                    [
-                      "text"
-                    ]
-                  ]
+                  "columns": "1"
                 }
               }
             }
