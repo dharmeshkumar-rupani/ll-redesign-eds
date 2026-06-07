@@ -1,0 +1,187 @@
+{
+  "metadata": {
+    "projectType": "xwalk"
+  },
+  "templates": [
+    {
+      "name": "homepage",
+      "urls": [
+        "https://lifelock.norton.com/",
+        "https://lifelock.norton.com/?at_preview_token=quvOsKVVALCtZCs_Eip4fQ&at_preview_index=1_1&at_preview_listed_activities_only=true&inid=lifelock_nav_test_identity-privacy_home%3Ahome#"
+      ],
+      "description": "LifeLock Norton homepage with identity theft protection plans and features",
+      "blocks": [
+        {
+          "name": "hero-lifestyle",
+          "instances": [
+            "div.slider.carousel.panelcontainer.c-slider--controls-inside"
+          ]
+        },
+        {
+          "name": "cards-stats",
+          "instances": [
+            "section.c-claims .c-claims__list"
+          ]
+        },
+        {
+          "name": "tabs-feature",
+          "instances": [
+            "section.c-features .c-features__desktop"
+          ]
+        },
+        {
+          "name": "columns-scan",
+          "instances": [
+            ".c-pdes .c-pdes__email"
+          ]
+        },
+        {
+          "name": "cards-pricing",
+          "instances": [
+            "section.c-plans .c-plans__pricing"
+          ]
+        },
+        {
+          "name": "columns-quiz",
+          "instances": [
+            ".c-quiz__container"
+          ]
+        },
+        {
+          "name": "carousel-testimonial",
+          "instances": [
+            ".reviews.c-reviews--with-border"
+          ]
+        },
+        {
+          "name": "carousel-awards",
+          "instances": [
+            "section.c-socialproof"
+          ]
+        },
+        {
+          "name": "cards-article",
+          "instances": [
+            "section.c-articlelist"
+          ]
+        },
+        {
+          "name": "columns-appbanner",
+          "instances": [
+            "section.c-appbanner"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "id": "section-1",
+          "name": "Hero",
+          "selector": "section.c-hero",
+          "style": null,
+          "blocks": [
+            "hero-lifestyle"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-2",
+          "name": "Claims/Stats",
+          "selector": "section.c-claims",
+          "style": null,
+          "blocks": [
+            "cards-stats"
+          ],
+          "defaultContent": [
+            ".c-claims__title"
+          ]
+        },
+        {
+          "id": "section-3",
+          "name": "Features",
+          "selector": "section.c-features",
+          "style": null,
+          "blocks": [
+            "tabs-feature"
+          ],
+          "defaultContent": [
+            ".c-features__intro"
+          ]
+        },
+        {
+          "id": "section-4",
+          "name": "Personal Data Exposure Scan",
+          "selector": "section.c-pdes",
+          "style": null,
+          "blocks": [
+            "columns-scan"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-5",
+          "name": "Pricing Plans",
+          "selector": "section.c-plans",
+          "style": null,
+          "blocks": [
+            "cards-pricing"
+          ],
+          "defaultContent": [
+            ".c-plans__intro"
+          ]
+        },
+        {
+          "id": "section-6",
+          "name": "Quiz",
+          "selector": "section.c-quiz",
+          "style": null,
+          "blocks": [
+            "columns-quiz"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-7",
+          "name": "Testimonials",
+          "selector": "section.c-testimonialcarousel",
+          "style": "dark",
+          "blocks": [
+            "carousel-testimonial"
+          ],
+          "defaultContent": [
+            ".c-testimonialcarousel__intro"
+          ]
+        },
+        {
+          "id": "section-8",
+          "name": "Awards/Trust",
+          "selector": "section.c-socialproof",
+          "style": "grey",
+          "blocks": [
+            "carousel-awards"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-9",
+          "name": "Article List",
+          "selector": "section.c-articlelist",
+          "style": null,
+          "blocks": [
+            "cards-article"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-10",
+          "name": "App Banner",
+          "selector": "section.c-appbanner",
+          "style": "dark",
+          "blocks": [
+            "columns-appbanner"
+          ],
+          "defaultContent": []
+        }
+      ]
+    }
+  ]
+}

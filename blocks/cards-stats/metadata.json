@@ -1,0 +1,39 @@
+{
+  "variantName": "cards-stats",
+  "baseBlock": "cards",
+  "version": "1.0.0",
+  "created": "2026-06-06T21:41:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://lifelock.norton.com/",
+    "originPage": "LifeLock homepage",
+    "blockPosition": "top"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "spacious",
+    "purpose": "stats-display",
+    "imagePattern": "noimg"
+  },
+  "contentPattern": {
+    "structure": "3 items + stat number + title + description",
+    "buttonCount": 0,
+    "imageCount": 0
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "statistics or key numbers display",
+      "trust/credibility sections with metrics",
+      "value propositions with numerical data"
+    ],
+    "notSuitableFor": [
+      "image-heavy card grids",
+      "article listings",
+      "product pricing cards"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/index"],
+    "reuseCount": 1,
+    "lastUsed": "2026-06-06T21:41:00.000Z"
+  }
+}

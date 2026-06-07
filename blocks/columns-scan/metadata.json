@@ -1,0 +1,39 @@
+{
+  "variantName": "columns-scan",
+  "baseBlock": "columns",
+  "version": "1.0.0",
+  "created": "2026-06-06T21:41:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://lifelock.norton.com/",
+    "originPage": "LifeLock homepage",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "compact",
+    "purpose": "interactive-form",
+    "imagePattern": "noimg"
+  },
+  "contentPattern": {
+    "structure": "heading + description + form input + button + results",
+    "buttonCount": 1,
+    "imageCount": 0
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "interactive scan/check tools",
+      "email verification widgets",
+      "single-field form sections"
+    ],
+    "notSuitableFor": [
+      "standard side-by-side content",
+      "image + text layouts",
+      "multi-field contact forms"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/index"],
+    "reuseCount": 1,
+    "lastUsed": "2026-06-06T21:41:00.000Z"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "variantName": "cards-pricing",
+  "baseBlock": "cards",
+  "version": "1.0.0",
+  "created": "2026-06-06T21:41:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://lifelock.norton.com/",
+    "originPage": "LifeLock homepage",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "compact",
+    "purpose": "pricing-comparison",
+    "imagePattern": "noimg"
+  },
+  "contentPattern": {
+    "structure": "3 plan cards + title + description + price + features + CTA",
+    "buttonCount": 3,
+    "imageCount": 0
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "product pricing comparison pages",
+      "subscription plan displays",
+      "tiered service offerings"
+    ],
+    "notSuitableFor": [
+      "image gallery cards",
+      "article listings",
+      "team member displays"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/index"],
+    "reuseCount": 1,
+    "lastUsed": "2026-06-06T21:41:00.000Z"
+  }
+}

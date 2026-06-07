@@ -1,0 +1,39 @@
+{
+  "variantName": "hero-lifestyle",
+  "baseBlock": "hero",
+  "version": "1.0.0",
+  "created": "2026-06-06T21:41:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://lifelock.norton.com/",
+    "originPage": "LifeLock homepage",
+    "blockPosition": "top"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "dark",
+    "density": "spacious",
+    "purpose": "homepage-hero",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "background image + heading + subheading + 2 CTAs + trust badge",
+    "buttonCount": 2,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "homepage hero sections",
+      "landing pages with lifestyle photography",
+      "pages with dark overlay on background image"
+    ],
+    "notSuitableFor": [
+      "text-only heroes without images",
+      "minimal blog post headers",
+      "product detail pages"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/index"],
+    "reuseCount": 1,
+    "lastUsed": "2026-06-06T21:41:00.000Z"
+  }
+}

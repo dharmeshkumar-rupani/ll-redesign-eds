@@ -1,0 +1,395 @@
+/* Block: cards-pricing */
+
+/* Section header centering */
+.cards-pricing-container > .default-content-wrapper {
+  text-align: center;
+}
+
+.cards-pricing-container > .default-content-wrapper h2 {
+  font-size: 36px;
+  font-weight: 700;
+  color: rgb(36 36 36);
+  line-height: 1.3;
+  margin-bottom: 8px;
+}
+
+.cards-pricing-container > .default-content-wrapper p {
+  color: rgb(80 80 80);
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.cards-pricing-container > .default-content-wrapper:last-child {
+  margin-top: 24px;
+}
+
+.cards-pricing-container > .default-content-wrapper:last-child a {
+  color: rgb(36 36 36);
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 16px;
+  border: 1px solid rgb(36 36 36);
+  border-radius: 32px;
+  padding: 10px 24px;
+  display: inline-block;
+}
+
+/* Toggle container */
+.cards-pricing-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background-color: rgb(241 241 241);
+  border-radius: 100px;
+  padding: 4px;
+  margin: 0 auto 40px;
+  width: fit-content;
+  gap: 0;
+}
+
+.cards-pricing-toggle-indicator {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: calc(50% - 4px);
+  height: calc(100% - 8px);
+  background-color: #fff;
+  border-radius: 100px;
+  box-shadow: 0 2px 4px rgb(0 0 0 / 10%);
+  transition: transform 0.3s ease;
+}
+
+.cards-pricing-toggle-btn {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 20px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  color: rgb(80 80 80);
+  font-family: var(--body-font-family);
+  white-space: nowrap;
+  transition: color 0.2s;
+}
+
+.cards-pricing-toggle-btn.active {
+  color: rgb(36 36 36);
+  font-weight: 600;
+}
+
+.cards-pricing-save-badge {
+  display: inline-block;
+  background-color: rgb(36 36 36);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+
+/* Cards list */
+.cards-pricing > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.cards-pricing > ul > li {
+  background-color: #fff;
+  border: 1px solid rgb(220 220 220);
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgb(0 0 0 / 5%);
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+/* Features list items (must come before nth-child rules) */
+.cards-pricing .cards-pricing-features li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  color: rgb(36 36 36);
+  background: none;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 0;
+}
+
+.cards-pricing .cards-pricing-features li::before {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  min-width: 16px;
+  margin-top: 2px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none'%3E%3Cpath d='M2.5 8.5L6 12L13.5 4' stroke='%2316837a' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+/* Advanced card (2nd) - highlighted with teal border */
+.cards-pricing > ul > li:nth-child(2) {
+  border: 2px solid rgb(16 131 137);
+}
+
+/* Card body */
+.cards-pricing .cards-pricing-card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin: 0;
+  flex: 1;
+}
+
+/* Hide the empty first card-body div */
+.cards-pricing .cards-pricing-card-body:first-child:empty {
+  display: none;
+}
+
+/* Title row - flex container for h3 + badge */
+.cards-pricing-title-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0 0 4px;
+  flex-wrap: wrap;
+}
+
+.cards-pricing .cards-pricing-title-row p {
+  margin: 0;
+}
+
+/* Plan title */
+.cards-pricing h3 {
+  font-size: 24px;
+  font-weight: 700;
+  font-family: var(--body-font-family);
+  line-height: 1.3;
+  color: rgb(36 36 36);
+  margin: 0;
+}
+
+/* Description paragraphs */
+.cards-pricing .cards-pricing-card-body p {
+  font-size: 14px;
+  line-height: 1.5;
+  color: rgb(100 110 120);
+  margin: 8px 0 4px;
+}
+
+/* Pricing details note */
+.cards-pricing .cards-pricing-cta-wrapper p em {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  color: rgb(100 110 120);
+  text-decoration: underline;
+}
+
+.cards-pricing .cards-pricing-card-body p:last-child em {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  color: rgb(100 110 120);
+  text-decoration: underline;
+}
+
+/* Badge - inline with title */
+.cards-pricing .cards-pricing-title-row p > em:only-child {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  font-style: normal;
+  padding: 4px 10px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  vertical-align: middle;
+  margin-left: 10px;
+}
+
+/* Advanced card badge - teal background */
+.cards-pricing > ul > li:nth-child(2) .cards-pricing-title-row p > em:only-child {
+  background-color: rgb(16 131 137);
+  color: #fff;
+}
+
+/* Total card badge - dark background */
+.cards-pricing > ul > li:nth-child(3) .cards-pricing-title-row p > em:only-child {
+  background-color: rgb(36 36 36);
+  color: #fff;
+}
+
+/* Price container */
+.cards-pricing-price-container {
+  margin: 20px 0 4px;
+}
+
+.cards-pricing-price {
+  display: flex;
+  align-items: baseline;
+  gap: 2px;
+}
+
+.cards-pricing-price-amount {
+  font-size: 40px;
+  font-weight: 700;
+  color: rgb(36 36 36);
+  font-family: var(--body-font-family);
+  line-height: 1;
+}
+
+.cards-pricing-price-unit {
+  font-size: 14px;
+  font-weight: 400;
+  color: rgb(100 110 120);
+  margin-left: 4px;
+}
+
+/* Annual/Monthly price visibility */
+.cards-pricing.annual .monthly-price,
+.cards-pricing.annual .monthly-subprice,
+.cards-pricing.annual .monthly-cta {
+  display: none;
+}
+
+.cards-pricing.monthly .annual-price,
+.cards-pricing.monthly .annual-subprice,
+.cards-pricing.monthly .annual-cta {
+  display: none;
+}
+
+/* Subprice "Pay $x today" */
+.cards-pricing .cards-pricing-subprice {
+  font-size: 14px;
+  color: rgb(100 110 120);
+  margin: 4px 0 0;
+}
+
+/* Features list - always visible */
+.cards-pricing-features {
+  list-style: none;
+  margin: 20px 0 0;
+  padding: 16px 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  border-top: 1px solid rgb(220 220 220);
+}
+
+/* CTA wrapper - after features, pushed to bottom */
+.cards-pricing-cta-wrapper {
+  margin-top: auto;
+  padding-top: 20px;
+}
+
+/* Pricing note in CTA wrapper */
+
+/* stylelint-disable-next-line no-descending-specificity */
+.cards-pricing .cards-pricing-cta-wrapper > p:last-child {
+  text-align: center;
+  margin: 4px 0 0;
+}
+
+/* CTA link - outline button (Core & Total) */
+.cards-pricing .cards-pricing-card-body p a:any-link,
+.cards-pricing .cards-pricing-cta-wrapper p a:any-link {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+  background-color: transparent;
+  color: rgb(36 36 36);
+  font-size: 16px;
+  font-weight: 600;
+  padding: 14px 26px;
+  border-radius: 32px;
+  border: 1.5px solid rgb(36 36 36);
+  text-decoration: none;
+  line-height: 1.4;
+  margin: 0 0 8px;
+  white-space: nowrap;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.cards-pricing .cards-pricing-card-body p a:hover,
+.cards-pricing .cards-pricing-cta-wrapper p a:hover {
+  background-color: rgb(36 36 36);
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Override for EDS-decorated buttons */
+main .cards-pricing a.button:any-link {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+  background-color: transparent;
+  color: rgb(36 36 36);
+  font-size: 16px;
+  font-weight: 600;
+  padding: 14px 26px;
+  border-radius: 32px;
+  border: 1.5px solid rgb(36 36 36);
+  text-decoration: none;
+  line-height: 1.4;
+  margin: 0 0 8px;
+  white-space: nowrap;
+}
+
+/* Advanced card CTA - filled teal button */
+.cards-pricing > ul > li:nth-child(2) .cards-pricing-card-body p a:any-link,
+.cards-pricing > ul > li:nth-child(2) .cards-pricing-cta-wrapper p a:any-link {
+  background-color: rgb(16 131 137);
+  color: #fff;
+  border-color: rgb(16 131 137);
+}
+
+.cards-pricing > ul > li:nth-child(2) .cards-pricing-card-body p a:hover,
+.cards-pricing > ul > li:nth-child(2) .cards-pricing-cta-wrapper p a:hover {
+  background-color: rgb(12 100 105);
+  color: #fff;
+}
+
+/* Desktop layout: 3 cards side by side */
+@media (width >= 900px) {
+  .cards-pricing > ul {
+    flex-direction: row;
+    align-items: stretch;
+  }
+
+  .cards-pricing > ul > li {
+    flex: 1;
+    min-width: 0;
+    padding: 32px 24px;
+  }
+
+  .cards-pricing h3 {
+    font-size: 28px;
+  }
+
+  .cards-pricing-price-amount {
+    font-size: 44px;
+  }
+
+  .cards-pricing-toggle-btn {
+    padding: 12px 24px;
+    font-size: 16px;
+  }
+}

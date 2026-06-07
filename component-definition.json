@@ -83,6 +83,96 @@
       "id": "blocks",
       "components": [
         {
+          "title": "Cards Article",
+          "id": "cards-article",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Cards Article",
+                  "filter": "cards-article"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Card",
+          "id": "card",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "Card",
+                  "model": "card"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Cards Pricing",
+          "id": "cards-pricing",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Cards Pricing",
+                  "filter": "cards-pricing"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Card",
+          "id": "card",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "Card",
+                  "model": "card"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Cards Stats",
+          "id": "cards-stats",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Cards Stats",
+                  "filter": "cards-stats"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Card",
+          "id": "card",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "Card",
+                  "model": "card"
+                }
+              }
+            }
+          }
+        },
+        {
           "title": "Cards",
           "id": "cards",
           "plugins": {
@@ -107,6 +197,111 @@
                 "template": {
                   "name": "Card",
                   "model": "card"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Carousel Awards",
+          "id": "carousel-awards",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Carousel Awards",
+                  "filter": "carousel-awards"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Carousel Awards Slide",
+          "id": "carousel-awards-item",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "Carousel Awards Slide",
+                  "model": "carousel-awards-item"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Carousel Testimonial",
+          "id": "carousel-testimonial",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Carousel Testimonial",
+                  "filter": "carousel-testimonial"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Carousel Testimonial Slide",
+          "id": "carousel-testimonial-item",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "Carousel Testimonial Slide",
+                  "model": "carousel-testimonial-item"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Columns Appbanner",
+          "id": "columns-appbanner",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/columns/v1/columns",
+                "template": {
+                  "columns": "2",
+                  "rows": "1"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Columns Quiz",
+          "id": "columns-quiz",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/columns/v1/columns",
+                "template": {
+                  "columns": "2",
+                  "rows": "1"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Columns Scan",
+          "id": "columns-scan",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/columns/v1/columns",
+                "template": {
+                  "columns": "2",
+                  "rows": "1"
                 }
               }
             }
@@ -143,6 +338,30 @@
           }
         },
         {
+          "title": "Hero Lifestyle",
+          "id": "hero-lifestyle",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Hero Lifestyle",
+                  "model": "hero-lifestyle",
+                  "columns": [
+                    [
+                      "image",
+                      "imageAlt"
+                    ],
+                    [
+                      "text"
+                    ]
+                  ]
+                }
+              }
+            }
+          }
+        },
+        {
           "title": "Hero",
           "id": "hero",
           "plugins": {
@@ -152,6 +371,38 @@
                 "template": {
                   "name": "Hero",
                   "model": "hero"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Tabs Feature",
+          "id": "tabs-feature",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Tabs Feature",
+                  "filter": "tabs-feature"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Tabs Feature Item",
+          "id": "tabs-feature-item",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "Tab",
+                  "model": "tabs-feature-item",
+                  "title": "Tab Name",
+                  "content_headingType": "h3"
                 }
               }
             }

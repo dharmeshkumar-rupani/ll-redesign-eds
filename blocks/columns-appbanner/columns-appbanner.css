@@ -1,0 +1,114 @@
+/* Block: columns-appbanner — App banner with background phone image and download badges */
+
+/* Full-width wrapper override */
+.columns-appbanner-wrapper {
+  max-width: 100% !important;
+  padding: 0 !important;
+}
+
+.columns-appbanner {
+  background-color: var(--color-dark);
+  color: #fff;
+  padding: 64px 24px;
+  min-height: 400px;
+  background-image: url("https://lifelock.norton.com/content/dam/lifelock/image/bg_img_download_app_d_2x.jpg");
+  background-size: cover;
+  background-position: 80% 50%;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+}
+
+.columns-appbanner > div {
+  display: flex;
+  flex-direction: column;
+  max-width: 640px;
+  gap: 32px;
+}
+
+.columns-appbanner > div > div {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Badge text — first paragraph "LIFELOCK APP" */
+.columns-appbanner > div > div > p:first-child {
+  font-size: 14px;
+  font-weight: 500;
+  font-family: var(--body-font-family);
+  line-height: 16px;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  color: rgb(255 255 255 / 80%);
+  margin: 0;
+}
+
+/* Heading */
+.columns-appbanner h2 {
+  font-size: 36px;
+  font-weight: 500;
+  font-family: var(--body-font-family);
+  line-height: 44px;
+  letter-spacing: 0.9px;
+  color: #fff;
+  margin: 8px 0 0;
+}
+
+/* Subtitle paragraph */
+.columns-appbanner > div > div > p:nth-child(3) {
+  font-size: 18px;
+  font-family: var(--body-font-family);
+  line-height: 26px;
+  color: rgb(255 255 255 / 80%);
+  margin: 8px 0 0;
+}
+
+/* Store badges paragraph — contains the links with badge images */
+.columns-appbanner > div > div > p:last-child {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  margin: 24px 0 0;
+  align-items: center;
+}
+
+/* Store badge links */
+.columns-appbanner a {
+  display: inline-flex;
+  text-decoration: none;
+  line-height: 0;
+}
+
+.columns-appbanner a:hover {
+  text-decoration: none;
+  opacity: 0.85;
+}
+
+/* Store badge images */
+.columns-appbanner a picture {
+  display: flex;
+}
+
+.columns-appbanner a img {
+  width: 140px;
+  height: auto;
+}
+
+@media (width >= 900px) {
+  .columns-appbanner {
+    padding: 96px 64px;
+    min-height: 540px;
+    background-size: 1500px;
+  }
+
+  .columns-appbanner h2 {
+    font-size: 44px;
+    line-height: 52px;
+  }
+
+  .columns-appbanner > div > div > p:last-child {
+    gap: 24px;
+    margin: 32px 0 0;
+  }
+}

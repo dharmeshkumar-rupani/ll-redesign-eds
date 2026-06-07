@@ -1,0 +1,241 @@
+/* Block: tabs-feature
+ * Vertical numbered feature tabs with expandable descriptions.
+ * Left side: numbered list items (01-05) with tagline, heading, description.
+ * Right side: large image per active feature (desktop).
+ * CSS extracted from source computed styles and refined for EDS. */
+
+/* === Hide the tab interface - we use the UL list for the visual display === */
+.tabs-feature .tabs-feature-list {
+  display: none;
+}
+
+.tabs-feature .tabs-feature-panel {
+  display: none;
+}
+
+.tabs-feature .tabs-feature-panel[aria-hidden='true'] {
+  display: none;
+}
+
+.tabs-feature .tabs-feature-panel[aria-hidden='false'] {
+  display: none;
+}
+
+/* === Section-level styles (the section with class tabs-feature-container) === */
+.tabs-feature-container {
+  background-color: var(--background-color);
+}
+
+/* Section heading area */
+.tabs-feature-container > .default-content-wrapper:first-child {
+  margin-bottom: 56px;
+}
+
+.tabs-feature-container > .default-content-wrapper:first-child h2 {
+  font-size: 44px;
+  font-weight: 500;
+  font-family: var(--body-font-family);
+  line-height: 52px;
+  letter-spacing: 0.9px;
+  color: var(--text-color);
+  margin: 0;
+}
+
+.tabs-feature-container > .default-content-wrapper:first-child p {
+  font-size: 18px;
+  line-height: 26px;
+  color: var(--text-color);
+  margin: 20px 0 0;
+}
+
+/* === The UL list - this is the main visual component === */
+.tabs-feature-container > .default-content-wrapper:last-child {
+  margin: 0 auto;
+  padding: 0;
+}
+
+.tabs-feature-container > .default-content-wrapper:last-child > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Individual list items */
+.tabs-feature-container > .default-content-wrapper:last-child > ul > li {
+  padding: 24px 16px 24px 24px;
+  cursor: pointer;
+  border-left: 4px solid transparent;
+  transition: border-color 0.3s ease;
+}
+
+/* Active item - JS adds .active class */
+.tabs-feature-container > .default-content-wrapper:last-child > ul > li.active {
+  border-left-color: var(--text-color);
+}
+
+/* Image paragraph (first p with picture) - hidden on all items by default */
+.tabs-feature-container > .default-content-wrapper:last-child > ul > li > p:first-child {
+  margin: 0;
+  line-height: 0;
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+}
+
+/* Number + tagline paragraph (e.g., "01 · REIMBURSEMENT") */
+.tabs-feature-container > .default-content-wrapper:last-child > ul > li > p:nth-child(2) {
+  font-size: 14px;
+  font-weight: 500;
+  font-family: var(--body-font-family);
+  line-height: 16px;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  color: rgb(16 131 137);
+  margin: 0;
+}
+
+/* Heading (inactive items are muted at 0.5 opacity) */
+.tabs-feature-container > .default-content-wrapper:last-child > ul > li > h3 {
+  font-size: 24px;
+  font-weight: 500;
+  font-family: var(--heading-font-family);
+  line-height: 30px;
+  letter-spacing: 0.5px;
+  color: var(--text-color);
+  margin: 8px 0 0;
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+}
+
+.tabs-feature-container > .default-content-wrapper:last-child > ul > li.active > h3 {
+  opacity: 1;
+}
+
+/* Tag/label (last paragraph, e.g., "Identity theft protection") - hidden */
+.tabs-feature-container > .default-content-wrapper:last-child > ul > li > p:last-child {
+  display: none;
+}
+
+/* Description paragraph (4th element overall = after img p, tagline p, h3) */
+.tabs-feature-container > .default-content-wrapper:last-child > ul > li > p:nth-of-type(3) {
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--text-color);
+  margin: 0;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.55s cubic-bezier(0.4, 0, 0.2, 1),
+    margin-top 0.55s cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 0.55s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Active item description - expanded */
+.tabs-feature-container > .default-content-wrapper:last-child > ul > li.active > p:nth-of-type(3) {
+  max-height: 200px;
+  margin-top: 16px;
+  opacity: 1;
+}
+
+/* === Desktop layout (900px+) === */
+@media (width >= 900px) {
+  /* Section becomes positioning context with consistent alignment */
+  main > .section.tabs-feature-container {
+    position: relative;
+    overflow: hidden;
+    max-width: var(--content-max-width);
+    margin: 0 auto;
+    padding: 80px 32px;
+  }
+
+  /* Reset child wrapper padding since section handles it */
+  .tabs-feature-container > div {
+    max-width: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Title area - takes left column */
+  .tabs-feature-container > .default-content-wrapper:first-child {
+    max-width: 45%;
+    margin: 0 0 40px;
+    padding: 0;
+  }
+
+  .tabs-feature-container > .default-content-wrapper:first-child h2 {
+    max-width: 100%;
+  }
+
+  /* Feature list - takes left column */
+  .tabs-feature-container > .default-content-wrapper:last-child {
+    max-width: 45%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .tabs-feature-container > .default-content-wrapper:last-child > ul {
+    position: static;
+  }
+
+  /* Active image - absolute positioned to fill right column */
+  .tabs-feature-container > .default-content-wrapper:last-child > ul > li.active > p:first-child {
+    position: absolute;
+    inset: 80px 0 80px 50%;
+    width: auto;
+    max-height: none;
+    opacity: 1;
+    line-height: normal;
+    overflow: hidden;
+    border-radius: 16px;
+    margin: 0;
+  }
+
+  .tabs-feature-container > .default-content-wrapper:last-child > ul > li > p:first-child picture {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  .tabs-feature-container > .default-content-wrapper:last-child > ul > li > p:first-child img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 16px;
+  }
+}
+
+/* === Mobile-specific refinements === */
+@media (width < 900px) {
+  .tabs-feature-container > .default-content-wrapper:first-child h2 {
+    font-size: 32px;
+    line-height: 38px;
+  }
+
+  .tabs-feature-container > .default-content-wrapper:last-child > ul > li {
+    padding: 20px 12px 20px 20px;
+  }
+
+  .tabs-feature-container > .default-content-wrapper:last-child > ul > li > h3 {
+    font-size: 20px;
+    line-height: 26px;
+  }
+
+  /* On mobile show active item image inline */
+  .tabs-feature-container > .default-content-wrapper:last-child > ul > li.active > p:first-child {
+    max-height: 400px;
+    opacity: 1;
+    margin-bottom: 16px;
+    line-height: normal;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .tabs-feature-container > .default-content-wrapper:last-child > ul > li > p:first-child img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "variantName": "carousel-awards",
+  "baseBlock": "carousel",
+  "version": "1.0.0",
+  "created": "2026-06-06T21:41:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://lifelock.norton.com/",
+    "originPage": "LifeLock homepage",
+    "blockPosition": "bottom"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "grey",
+    "density": "compact",
+    "purpose": "trust-badges",
+    "imagePattern": "icon"
+  },
+  "contentPattern": {
+    "structure": "multiple slides + badge image + caption text",
+    "buttonCount": 0,
+    "imageCount": "multiple"
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "award/certification badge displays",
+      "trust indicator carousels",
+      "partner logo scrollers"
+    ],
+    "notSuitableFor": [
+      "full-size testimonial carousels",
+      "product image galleries",
+      "content sliders with text"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/index"],
+    "reuseCount": 1,
+    "lastUsed": "2026-06-06T21:41:00.000Z"
+  }
+}

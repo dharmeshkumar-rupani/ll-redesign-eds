@@ -1,0 +1,123 @@
+/*
+ * Block: cards-stats
+ * Stats display with large numbers, subtitles, and descriptions
+ * Extracted values from source: lifelock.norton.com section.c-claims .c-claims__list
+ */
+
+/* Section heading above stats should be centered */
+.cards-stats-container > div > h2 {
+  text-align: center;
+  font-size: 44px;
+  font-weight: 500;
+  font-family: var(--body-font-family);
+  line-height: 52px;
+  color: var(--text-color);
+  margin-bottom: 32px;
+}
+
+.cards-stats > ul {
+  list-style: none;
+  margin: 0;
+  padding: 40px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  background-color: rgb(245 242 235);
+  border-radius: 8px;
+}
+
+.cards-stats > ul > li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 32px 0;
+  text-align: center;
+  flex: 1 1 0%;
+  position: relative;
+  border: none;
+  background: none;
+}
+
+/* Horizontal dividers between items on mobile */
+.cards-stats > ul > li + li::before {
+  content: "";
+  display: block;
+  width: 96px;
+  height: 1px;
+  background-color: rgb(205 204 203);
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Hide empty image cell */
+.cards-stats .cards-stats-card-image {
+  display: none;
+}
+
+.cards-stats .cards-stats-card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  text-align: center;
+  width: 100%;
+}
+
+/* Stat number heading */
+.cards-stats .cards-stats-card-body h3 {
+  font-size: 56px;
+  font-weight: 300;
+  font-family: var(--body-font-family);
+  line-height: 1.2;
+  letter-spacing: 1.4px;
+  color: var(--color-teal);
+  margin: 0 0 8px;
+}
+
+/* Subtitle (bold paragraph) */
+.cards-stats .cards-stats-card-body p {
+  font-size: 16px;
+  font-weight: 400;
+  font-family: var(--body-font-family);
+  line-height: 24px;
+  color: rgb(22 22 22);
+  margin: 0;
+}
+
+.cards-stats .cards-stats-card-body p strong {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 26px;
+}
+
+/* Desktop layout */
+@media (width >= 900px) {
+  .cards-stats > ul {
+    flex-direction: row;
+    gap: 40px;
+    padding: 40px 24px;
+  }
+
+  .cards-stats > ul > li {
+    padding: 0;
+    align-items: center;
+  }
+
+  /* Vertical dividers between items on desktop */
+  .cards-stats > ul > li + li::before {
+    width: 1px;
+    height: 176px;
+    top: 50%;
+    left: -20px;
+    transform: translateY(-50%);
+  }
+
+  .cards-stats .cards-stats-card-body h3 {
+    font-size: 72px;
+    line-height: 86px;
+  }
+}

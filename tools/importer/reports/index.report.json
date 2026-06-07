@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://lifelock.norton.com/?at_preview_token=quvOsKVVALCtZCs_Eip4fQ&at_preview_index=1_1&at_preview_listed_activities_only=true&inid=lifelock_nav_test_identity-privacy_home%3Ahome#",
+  "path": "index",
+  "timestamp": "2026-06-06T22:17:34.743Z",
+  "title": "Identity Theft Protection | LifeLock Official Site",
+  "template": "homepage",
+  "blocks": [
+    "cards-stats",
+    "tabs-feature",
+    "cards-pricing",
+    "cards-article",
+    "columns-appbanner"
+  ]
+}

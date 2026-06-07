@@ -1,0 +1,39 @@
+{
+  "variantName": "columns-appbanner",
+  "baseBlock": "columns",
+  "version": "1.0.0",
+  "created": "2026-06-06T21:41:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://lifelock.norton.com/",
+    "originPage": "LifeLock homepage",
+    "blockPosition": "bottom"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "dark",
+    "density": "spacious",
+    "purpose": "app-promotion",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "device mockup image + badge + heading + subheading + app store buttons",
+    "buttonCount": 2,
+    "imageCount": 3
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "mobile app download banners",
+      "app promotion sections with device mockups",
+      "CTA sections with image + download links"
+    ],
+    "notSuitableFor": [
+      "standard text columns",
+      "pricing comparisons",
+      "multi-row content layouts"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/index"],
+    "reuseCount": 1,
+    "lastUsed": "2026-06-06T21:41:00.000Z"
+  }
+}

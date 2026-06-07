@@ -1,0 +1,39 @@
+{
+  "variantName": "tabs-feature",
+  "baseBlock": "tabs",
+  "version": "1.0.0",
+  "created": "2026-06-06T21:41:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://lifelock.norton.com/",
+    "originPage": "LifeLock homepage",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "spacious",
+    "purpose": "feature-showcase",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "4 tabs + numbered titles + descriptions + images",
+    "buttonCount": 0,
+    "imageCount": 4
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "feature showcase sections with multiple categories",
+      "product capability demonstrations",
+      "how-it-works sections with switchable content"
+    ],
+    "notSuitableFor": [
+      "simple FAQ sections",
+      "pricing tab switchers",
+      "navigation-style tab interfaces"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/index"],
+    "reuseCount": 1,
+    "lastUsed": "2026-06-06T21:41:00.000Z"
+  }
+}

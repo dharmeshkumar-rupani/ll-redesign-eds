@@ -1,0 +1,192 @@
+/* Block: hero-lifestyle
+ * Full-width hero with lifestyle photo background, white text overlay,
+ * primary + secondary CTA buttons, and trust badge.
+ * Extracted values from source: lifelock.norton.com hero section.
+ */
+
+/* Full-width wrapper override */
+.hero-lifestyle-container .hero-lifestyle-wrapper {
+  max-width: 100% !important;
+  padding: 0 !important;
+}
+
+/* Block root */
+.hero-lifestyle {
+  position: relative;
+  overflow: hidden;
+  background-color: rgb(47 48 60);
+  color: #fff;
+  padding: 60px 24px;
+  min-height: 480px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Row 1: Background image (absolute positioned) */
+.hero-lifestyle > div:first-child {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+/* Row 2: Content overlay */
+.hero-lifestyle > div:last-child {
+  position: relative;
+  z-index: 1;
+  max-width: var(--content-max-width);
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 24px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Row 1 nested elements */
+.hero-lifestyle > div:first-child > div {
+  position: absolute;
+  inset: 0;
+}
+
+.hero-lifestyle > div:first-child picture {
+  position: absolute;
+  inset: 0;
+  display: block;
+}
+
+.hero-lifestyle > div:first-child img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Row 2 nested elements */
+.hero-lifestyle > div:last-child > div {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 640px;
+}
+
+/* Heading */
+.hero-lifestyle h1 {
+  font-family: var(--heading-font-family);
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 1.3px;
+  color: #fff;
+  margin: 0;
+}
+
+/* Subtitle paragraph */
+.hero-lifestyle p {
+  font-family: var(--body-font-family);
+  font-size: 18px;
+  line-height: 28px;
+  color: #fff;
+  margin: 0;
+}
+
+/* Primary CTA button (See plans) - white bg, dark text */
+main .hero-lifestyle a.button.primary:any-link {
+  background-color: #fff;
+  color: rgb(22 22 22);
+  border: 0 none;
+  border-radius: 100px;
+  padding: 16px 24px;
+  font-family: var(--body-font-family);
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.4;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  transition: background-color 0.2s, opacity 0.2s;
+}
+
+main .hero-lifestyle a.button.primary:hover {
+  background-color: #e5e5e5;
+  text-decoration: none;
+}
+
+/* Secondary CTA (How it works) - outlined white */
+.hero-lifestyle .hero-lifestyle-ctas > p:not(.button-wrapper) > a:any-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 100px;
+  padding: 16px 24px;
+  font-family: var(--body-font-family);
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.4;
+  text-decoration: none;
+  width: fit-content;
+  transition: background-color 0.2s, border-color 0.2s;
+}
+
+.hero-lifestyle .hero-lifestyle-ctas > p:not(.button-wrapper) > a:hover {
+  background-color: rgb(255 255 255 / 10%);
+  text-decoration: none;
+}
+
+/* CTA container (buttons side by side) */
+.hero-lifestyle .hero-lifestyle-ctas {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Button wrapper reset for proper spacing */
+.hero-lifestyle .hero-lifestyle-ctas p {
+  margin: 0;
+}
+
+/* Trust badge image (Trustpilot) */
+.hero-lifestyle > div:last-child > div > p:last-child picture {
+  display: inline-block;
+}
+
+.hero-lifestyle > div:last-child > div > p:last-child img {
+  height: 24px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* Desktop styles */
+@media (width >= 900px) {
+  .hero-lifestyle {
+    padding: 80px 32px;
+    min-height: 606px;
+  }
+
+  .hero-lifestyle > div:last-child {
+    padding: 0 32px;
+  }
+
+  .hero-lifestyle h1 {
+    font-size: 64px;
+    line-height: 76px;
+  }
+
+  .hero-lifestyle p {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  /* CTAs side by side on desktop */
+  .hero-lifestyle .hero-lifestyle-ctas {
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+  }
+}

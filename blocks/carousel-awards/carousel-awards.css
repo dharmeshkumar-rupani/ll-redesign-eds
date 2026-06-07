@@ -1,0 +1,156 @@
+/* Block: carousel-awards
+ * Awards marquee: centered heading + horizontal scrolling row of award badges.
+ * Source: section.c-awardscarousel on lifelock.norton.com
+ */
+
+/* Wrapper override for full-width display */
+.carousel-awards-wrapper {
+  max-width: 100% !important;
+  padding: 0 !important;
+}
+
+/* Block container */
+.carousel-awards {
+  background-color: var(--color-grey);
+  padding: 80px 0;
+  overflow: hidden;
+  text-align: center;
+}
+
+/* Heading: "Millions of people trust LifeLock" */
+.carousel-awards h3 {
+  font-size: 28px;
+  font-weight: 500;
+  font-family: var(--body-font-family);
+  line-height: 1.2;
+  letter-spacing: 0.9px;
+  color: var(--text-color);
+  text-align: center;
+  margin: 0 0 40px;
+}
+
+/* Slides container (no relative positioning needed for this layout) */
+.carousel-awards .carousel-awards-slides-container {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Slides track: horizontal flex, scrolling marquee */
+.carousel-awards .carousel-awards-slides {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 0;
+  scroll-behavior: auto;
+  scroll-snap-type: none;
+  overflow: visible;
+  animation: carousel-awards-scroll 30s linear infinite;
+}
+
+.carousel-awards .carousel-awards-slides::-webkit-scrollbar {
+  display: none;
+}
+
+/* Each slide = one award badge, shown inline (not full-width) */
+.carousel-awards .carousel-awards-slide {
+  flex: 0 0 auto;
+  scroll-snap-align: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 21px;
+  position: relative;
+  width: auto;
+  min-width: 200px;
+  min-height: auto;
+  padding: 0 32px;
+  text-align: center;
+}
+
+/* Image column */
+.carousel-awards .carousel-awards-slide .carousel-awards-slide-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 88px;
+}
+
+.carousel-awards .carousel-awards-slide .carousel-awards-slide-image picture {
+  position: static;
+  inset: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 88px;
+}
+
+.carousel-awards .carousel-awards-slide .carousel-awards-slide-image picture > img {
+  height: auto;
+  width: auto;
+  max-width: 200px;
+  max-height: 88px;
+  object-fit: contain;
+}
+
+/* Content column (caption text) */
+.carousel-awards .carousel-awards-slide .carousel-awards-slide-content {
+  z-index: auto;
+  margin: 0;
+  padding: 0;
+  color: var(--text-color);
+  background-color: transparent;
+  position: static;
+  width: auto;
+}
+
+.carousel-awards .carousel-awards-slide .carousel-awards-slide-content p {
+  font-size: 14px;
+  font-family: var(--body-font-family);
+  line-height: 22px;
+  color: var(--text-color);
+  margin: 0;
+  text-align: center;
+}
+
+/* Hide navigation buttons and indicators (not needed for marquee) */
+.carousel-awards .carousel-awards-navigation-buttons {
+  display: none;
+}
+
+.carousel-awards .carousel-awards-slide-indicators {
+  display: none;
+}
+
+/* Scrolling marquee animation */
+@keyframes carousel-awards-scroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-25%);
+  }
+}
+
+/* Pause animation on hover for accessibility */
+.carousel-awards .carousel-awards-slides:hover {
+  animation-play-state: paused;
+}
+
+/* Desktop adjustments */
+@media (width >= 900px) {
+  .carousel-awards h3 {
+    font-size: 44px;
+    line-height: 52px;
+    margin: 0 0 56px;
+  }
+
+  .carousel-awards .carousel-awards-slide {
+    min-width: 240px;
+    padding: 0 48px;
+  }
+}

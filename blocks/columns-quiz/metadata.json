@@ -1,0 +1,39 @@
+{
+  "variantName": "columns-quiz",
+  "baseBlock": "columns",
+  "version": "1.0.0",
+  "created": "2026-06-06T21:41:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://lifelock.norton.com/",
+    "originPage": "LifeLock homepage",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "spacious",
+    "purpose": "interactive-quiz",
+    "imagePattern": "noimg"
+  },
+  "contentPattern": {
+    "structure": "heading + subheading + multi-step quiz widget",
+    "buttonCount": 0,
+    "imageCount": 0
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "product recommendation quizzes",
+      "multi-step selection wizards",
+      "guided decision tools"
+    ],
+    "notSuitableFor": [
+      "standard image + text layouts",
+      "pricing displays",
+      "simple two-column content"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/index"],
+    "reuseCount": 1,
+    "lastUsed": "2026-06-06T21:41:00.000Z"
+  }
+}

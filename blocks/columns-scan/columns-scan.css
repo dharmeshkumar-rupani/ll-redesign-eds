@@ -1,0 +1,146 @@
+/* Block: columns-scan
+ * Two-column scan/CTA block with gradient background.
+ * Left column: heading, description, email CTA, legal text.
+ * Right column: illustration image.
+ */
+
+/* Wrapper: full-width gradient background */
+.columns-scan-wrapper {
+  max-width: 100% !important;
+  padding: 0 !important;
+}
+
+.columns-scan {
+  background-image: linear-gradient(318deg, rgb(232 225 207) -0.45%, rgb(248 246 241 / 60%) 53.58%, rgb(248 246 241) 88.97%);
+  color: rgb(22 22 22);
+  padding: 48px 24px;
+  overflow: hidden;
+  border-radius: var(--border-radius);
+}
+
+/* Row layout: stack on mobile */
+.columns-scan > div {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+/* Cell base */
+.columns-scan > div > div {
+  order: 1;
+}
+
+/* Image cell on top for mobile */
+.columns-scan > div > .columns-scan-img-col {
+  order: 0;
+}
+
+/* Text cell (left column) */
+.columns-scan > div > div:not(.columns-scan-img-col) {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Headings */
+.columns-scan h2 {
+  font-size: 32px;
+  font-weight: 500;
+  font-family: var(--body-font-family);
+  line-height: 1.2;
+  letter-spacing: 0.9px;
+  color: var(--text-color);
+  margin: 0;
+}
+
+.columns-scan h3 {
+  font-size: 28px;
+  font-weight: 600;
+  font-family: var(--body-font-family);
+  line-height: 1;
+  letter-spacing: 0.44px;
+  color: var(--text-color);
+  margin: 0;
+}
+
+/* Paragraphs */
+.columns-scan p {
+  font-size: 18px;
+  font-family: var(--body-font-family);
+  line-height: 26px;
+  color: var(--text-color);
+  margin: 0;
+}
+
+/* Legal / small text (last paragraphs) */
+.columns-scan > div > div:not(.columns-scan-img-col) p:nth-child(n+4) {
+  font-size: 12px;
+  line-height: 18px;
+  color: rgb(96 126 149);
+}
+
+/* Links in legal area */
+.columns-scan a:any-link {
+  color: rgb(96 126 149);
+  font-size: 12px;
+  font-weight: 500;
+  text-decoration: underline;
+}
+
+/* Primary CTA button */
+main .columns-scan a.button:any-link {
+  background-color: rgb(47 48 60);
+  color: rgb(255 255 255);
+  padding: 16px 24px;
+  border: none;
+  border-radius: 100px;
+  font-size: 18px;
+  font-weight: 500;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+main .columns-scan a.button:hover {
+  background-color: rgb(30 31 40);
+  text-decoration: none;
+}
+
+/* Images */
+.columns-scan img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.columns-scan > div > .columns-scan-img-col img {
+  border-radius: var(--border-radius);
+}
+
+/* Desktop layout */
+@media (width >= 900px) {
+  .columns-scan {
+    padding: 80px 64px;
+  }
+
+  .columns-scan > div {
+    flex-direction: row;
+    align-items: center;
+    gap: 48px;
+  }
+
+  .columns-scan > div > div {
+    flex: 1;
+    order: unset;
+  }
+
+  .columns-scan > div > .columns-scan-img-col {
+    order: unset;
+  }
+
+  .columns-scan h2 {
+    font-size: 44px;
+    line-height: 52px;
+  }
+}
