@@ -1,20 +1,323 @@
+/* stylelint-disable no-descending-specificity */
+
 footer {
-  background-color: var(--light-color);
-  font-size: var(--body-font-size-xs);
+  background-color: rgb(1 54 56);
+  color: rgb(200 200 200);
+  font-size: 14px;
 }
 
 footer .footer > div {
   margin: auto;
   max-width: 1200px;
-  padding: 40px 24px 24px;
+  padding: 0 24px;
 }
 
 footer .footer p {
   margin: 0;
 }
 
+footer a:any-link {
+  color: rgb(200 200 200);
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+  color: #fff;
+}
+
+/* All sections */
+footer .section {
+  padding: 32px 0;
+}
+
+footer .section:last-child {
+  border-bottom: none;
+}
+
+/* Section 1: Email signup + Nav columns (side by side on desktop) */
+footer .section:first-of-type {
+  padding: 48px 0 40px;
+  border-bottom: 1px solid rgb(255 255 255 / 15%);
+}
+
+footer .section:first-of-type .default-content-wrapper p:first-child {
+  color: #fff;
+  font-size: 36px;
+  font-weight: 400;
+  font-family: var(--heading-font-family, 'Playfair Display', georgia, serif);
+  margin-bottom: 12px;
+  line-height: 1.2;
+  width: 100%;
+}
+
+footer .section:first-of-type .default-content-wrapper p:nth-child(2) {
+  color: rgb(200 220 220);
+  font-size: 16px;
+  margin-bottom: 24px;
+  width: 100%;
+}
+
+footer .section:first-of-type .default-content-wrapper p:nth-child(3) {
+  background: #fff;
+  border: none;
+  border-radius: 40px;
+  padding: 18px 24px;
+  color: rgb(80 80 80);
+  font-size: 16px;
+  margin-bottom: 0;
+  flex: 1;
+}
+
+footer .section:first-of-type .default-content-wrapper p:nth-child(4) {
+  background: transparent;
+  color: #fff;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 16px 28px;
+  border-radius: 40px;
+  border: 2px solid #fff;
+  cursor: pointer;
+  margin-left: 12px;
+  margin-bottom: 0;
+}
+
+footer .section:first-of-type .default-content-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+footer .section:first-of-type .default-content-wrapper p:nth-child(5) {
+  font-size: 12px;
+  color: rgb(150 180 180);
+  margin-top: 16px;
+}
+
+footer .section:first-of-type .default-content-wrapper p:nth-child(5) a {
+  color: rgb(150 180 180);
+  text-decoration: underline;
+}
+
+/* Section 2: Navigation columns */
+footer .section:nth-of-type(2) {
+  padding: 40px 0;
+  border-bottom: 1px solid rgb(255 255 255 / 15%);
+}
+
+footer .section:nth-of-type(2) .default-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+footer .section:nth-of-type(2) .default-content-wrapper ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+footer .section:nth-of-type(2) .default-content-wrapper ul li {
+  margin-bottom: 12px;
+}
+
+footer .section:nth-of-type(2) .default-content-wrapper ul li strong {
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  display: block;
+  margin-bottom: 16px;
+}
+
+footer .section:nth-of-type(2) .default-content-wrapper ul li a {
+  font-size: 14px;
+  color: rgb(180 200 200);
+}
+
+@media (width >= 900px) {
+  footer .section:nth-of-type(2) .default-content-wrapper {
+    flex-direction: row;
+    gap: 48px;
+  }
+
+  footer .section:nth-of-type(2) .default-content-wrapper ul {
+    flex: 1;
+  }
+
+  /* Side-by-side: sections 1+2 share the same row */
+  footer .section:first-of-type {
+    float: left;
+    width: 38%;
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  footer .section:nth-of-type(2) {
+    margin-left: 40%;
+    padding-top: 48px;
+    border-bottom: none;
+  }
+
+  /* Sections 3+4: side-by-side disclaimer + coverage */
+  footer .section:nth-of-type(3) {
+    clear: both;
+    float: left;
+    width: 48%;
+  }
+
+  footer .section:nth-of-type(4) {
+    margin-left: 52%;
+    border-bottom: 1px solid rgb(255 255 255 / 15%);
+  }
+
+  footer .section:nth-of-type(5) {
+    clear: both;
+  }
+}
+
+/* Section 3: Subscription/pricing details (left column) */
+footer .section:nth-of-type(3) {
+  padding: 32px 0;
+  border-bottom: none;
+}
+
+footer .section:nth-of-type(3) .default-content-wrapper p {
+  font-size: 12px;
+  color: rgb(150 180 180);
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+
+footer .section:nth-of-type(3) .default-content-wrapper p strong {
+  color: #fff;
+  font-size: 13px;
+  text-decoration: underline;
+}
+
+footer .section:nth-of-type(3) .default-content-wrapper ul {
+  list-style: disc;
+  padding-left: 20px;
+  margin: 12px 0 0;
+}
+
+footer .section:nth-of-type(3) .default-content-wrapper ul li {
+  font-size: 12px;
+  color: rgb(150 180 180);
+  line-height: 1.6;
+  margin-bottom: 8px;
+}
+
+footer .section:nth-of-type(3) .default-content-wrapper ul li a {
+  color: rgb(150 180 180);
+  text-decoration: underline;
+}
+
+/* Section 4: Coverage details (right column) */
+footer .section:nth-of-type(4) {
+  padding: 32px 0;
+  border-bottom: 1px solid rgb(255 255 255 / 15%);
+}
+
+footer .section:nth-of-type(4) .default-content-wrapper p {
+  font-size: 12px;
+  color: rgb(150 180 180);
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+
+footer .section:nth-of-type(4) .default-content-wrapper p:first-child {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: rgb(200 200 200);
+  margin-bottom: 16px;
+}
+
+footer .section:nth-of-type(4) .default-content-wrapper p a {
+  color: rgb(150 180 180);
+  text-decoration: underline;
+}
+
+/* Section 5: Gen branding row (Gen logo + text + social icons) */
+footer .section:nth-of-type(5) {
+  padding: 32px 0;
+  border-top: 1px solid rgb(255 255 255 / 15%);
+  border-bottom: none;
+}
+
+footer .section:nth-of-type(5) .default-content-wrapper p:first-child {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  font-size: 14px;
+  gap: 16px;
+}
+
+footer .section:nth-of-type(5) .default-content-wrapper p:first-child a:first-child {
+  flex-shrink: 0;
+}
+
+footer .section:nth-of-type(5) .default-content-wrapper p:first-child a:first-child img {
+  height: 32px;
+  width: auto;
+  filter: brightness(0) invert(1);
+}
+
+footer .section:nth-of-type(5) .default-content-wrapper p:nth-child(2) {
+  display: flex;
+  gap: 16px;
+  justify-content: flex-end;
+  margin-top: -40px;
+}
+
+footer .section:nth-of-type(5) .default-content-wrapper p:nth-child(2) a {
+  display: inline-block;
+  text-decoration: none;
+}
+
+footer .section:nth-of-type(5) .default-content-wrapper p:nth-child(2) a img {
+  width: 36px;
+  height: 36px;
+  filter: brightness(0) invert(1);
+}
+
+/* Section 6: Copyright + legal links */
+footer .section:nth-of-type(6) {
+  border-top: none;
+  border-bottom: none;
+  padding: 24px 0 48px;
+}
+
+footer .section:nth-of-type(6) .default-content-wrapper p:first-child {
+  font-size: 11px;
+  color: rgb(150 180 180);
+  margin-bottom: 24px;
+  line-height: 1.7;
+}
+
+footer .section:nth-of-type(6) .default-content-wrapper p:nth-child(2) {
+  font-size: 11px;
+  color: rgb(150 180 180);
+  margin-bottom: 24px;
+  line-height: 1.7;
+}
+
+footer .section:nth-of-type(6) .default-content-wrapper p:nth-child(3) {
+  font-size: 13px;
+  color: rgb(150 180 180);
+  line-height: 2.2;
+}
+
+footer .section:nth-of-type(6) .default-content-wrapper p:nth-child(3) a {
+  color: rgb(180 200 200);
+  font-size: 13px;
+}
+
 @media (width >= 900px) {
   footer .footer > div {
-    padding: 40px 32px 24px;
+    padding: 0 40px;
   }
 }

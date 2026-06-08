@@ -142,78 +142,58 @@
     ]
   },
   {
-    "id": "columns-appbanner",
+    "id": "accordion",
     "fields": [
       {
         "component": "text",
-        "valueType": "number",
-        "name": "columns",
-        "value": "",
-        "label": "Columns"
+        "name": "title",
+        "label": "Title",
+        "valueType": "string"
       },
       {
-        "component": "text",
-        "valueType": "number",
-        "name": "rows",
-        "value": "",
-        "label": "Rows"
+        "component": "richtext",
+        "name": "content",
+        "label": "Content",
+        "valueType": "string"
       }
     ]
   },
   {
-    "id": "columns-quiz",
+    "id": "cards-review",
     "fields": [
       {
-        "component": "text",
-        "valueType": "number",
-        "name": "columns",
-        "value": "",
-        "label": "Columns"
-      },
-      {
-        "component": "text",
-        "valueType": "number",
-        "name": "rows",
-        "value": "",
-        "label": "Rows"
+        "component": "richtext",
+        "name": "text",
+        "label": "Review Content",
+        "valueType": "string"
       }
     ]
   },
   {
-    "id": "columns-scan",
+    "id": "cards-xsell",
     "fields": [
       {
-        "component": "text",
-        "valueType": "number",
-        "name": "columns",
-        "value": "",
-        "label": "Columns"
+        "component": "reference",
+        "name": "image",
+        "label": "Card Image",
+        "valueType": "string"
       },
       {
-        "component": "text",
-        "valueType": "number",
-        "name": "rows",
-        "value": "",
-        "label": "Rows"
+        "component": "richtext",
+        "name": "text",
+        "label": "Card Content",
+        "valueType": "string"
       }
     ]
   },
   {
-    "id": "columns",
+    "id": "columns-signup",
     "fields": [
       {
-        "component": "text",
-        "valueType": "number",
-        "name": "columns",
-        "value": "",
-        "label": "Columns"
-      },
-      {
-        "component": "text",
-        "valueType": "number",
-        "name": "rows",
-        "value": "",
-        "label": "Rows"
+        "component": "richtext",
+        "name": "text",
+        "label": "Signup Content",
+        "valueType": "string"
       }
     ]
   },
@@ -224,6 +204,23 @@
         "component": "aem-content",
         "name": "reference",
         "label": "Reference"
+      }
+    ]
+  },
+  {
+    "id": "hero-product",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "text",
+        "label": "Product Info",
+        "valueType": "string"
+      },
+      {
+        "component": "reference",
+        "name": "image",
+        "label": "Product Image",
+        "valueType": "string"
       }
     ]
   }

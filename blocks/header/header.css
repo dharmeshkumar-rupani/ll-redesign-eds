@@ -27,6 +27,39 @@ header .nav-wrapper.nav-scrolled {
   box-shadow: 0 2px 8px rgb(0 0 0 / 8%);
 }
 
+/* Non-homepage: solid header with dark text, no overlap */
+body:has(.hero-product-container) header {
+  position: relative;
+  height: auto;
+}
+
+body:has(.hero-product-container) header .nav-wrapper {
+  background-color: #fff;
+  color: rgb(36 36 36);
+  border-bottom: 1px solid rgb(235 235 235);
+}
+
+body:has(.hero-product-container) header .nav-wrapper:not(.nav-scrolled) nav .nav-sections .default-content-wrapper > ul > li,
+body:has(.hero-product-container) header .nav-wrapper:not(.nav-scrolled) nav .nav-sections .default-content-wrapper > ul > li > a,
+body:has(.hero-product-container) header .nav-wrapper:not(.nav-scrolled) nav .nav-tools p,
+body:has(.hero-product-container) header .nav-wrapper:not(.nav-scrolled) nav .nav-tools p a {
+  color: rgb(36 36 36);
+}
+
+body:has(.hero-product-container) header .nav-wrapper:not(.nav-scrolled) nav .nav-brand img {
+  filter: none;
+}
+
+body:has(.hero-product-container) header .nav-wrapper:not(.nav-scrolled) nav .nav-tools p:last-child a {
+  background-color: rgb(36 36 36);
+  border-color: rgb(36 36 36);
+  color: #fff;
+}
+
+body:has(.hero-product-container) header .nav-wrapper.nav-scrolled {
+  position: fixed;
+}
+
 header nav {
   box-sizing: border-box;
   display: grid;

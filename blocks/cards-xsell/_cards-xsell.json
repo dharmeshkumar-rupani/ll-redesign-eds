@@ -1,0 +1,39 @@
+{
+  "definitions": [
+    {
+      "title": "Cards Xsell",
+      "id": "cards-xsell",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/block/v1/block",
+            "template": {
+              "name": "Cards Xsell",
+              "model": "cards-xsell"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "models": [
+    {
+      "id": "cards-xsell",
+      "fields": [
+        {
+          "component": "reference",
+          "name": "image",
+          "label": "Card Image",
+          "valueType": "string"
+        },
+        {
+          "component": "richtext",
+          "name": "text",
+          "label": "Card Content",
+          "valueType": "string"
+        }
+      ]
+    }
+  ],
+  "filters": []
+}

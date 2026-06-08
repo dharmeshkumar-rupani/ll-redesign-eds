@@ -175,6 +175,15 @@ main > .section:nth-of-type(4) > .default-content-wrapper > p:nth-of-type(7) {
 /* === Section 7: Dark section - hide scraped popup/dialog junk === */
 .carousel-testimonial-container > .default-content-wrapper:last-child {
   display: none;
+  height: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove gap between last section and footer */
+main .section:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
 }
 
 /* === Section 7: Articles heading row (inside trust badges wrapper) === */
@@ -217,6 +226,8 @@ main .section.dark.carousel-testimonial-container {
   background-color: #fff;
   color: rgb(36 36 36);
   padding-top: 48px;
+  padding-bottom: 0;
+  margin-bottom: 0;
 }
 
 main .section.dark.carousel-testimonial-container h2,
@@ -238,9 +249,11 @@ main .section.dark.carousel-testimonial-container > .carousel-testimonial-wrappe
 
 main .section.dark.carousel-testimonial-container > .columns-appbanner-wrapper {
   background-color: rgb(1 54 56);
-  border-radius: 16px;
-  padding: 48px;
-  margin-top: 48px;
+  border-radius: 0;
+  padding: 60px 40px 0;
+  margin: 0 auto;
+  max-width: 1200px;
+  overflow: hidden;
 }
 
 main .section.dark.carousel-testimonial-container > .columns-appbanner-wrapper h2,
@@ -348,7 +361,7 @@ main .section.dark.carousel-testimonial-container > .columns-appbanner-wrapper p
 
 /* === Section 7: App banner (columns-appbanner) === */
 .carousel-testimonial-container .columns-appbanner-wrapper {
-  margin-top: 48px;
+  margin-top: 0;
 }
 
 .carousel-testimonial-container .columns-appbanner > div {

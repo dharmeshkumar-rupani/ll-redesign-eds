@@ -1,0 +1,141 @@
+/* Block: cards-feature — static feature category sections */
+.cards-feature {
+  max-width: 100%;
+}
+
+.cards-feature-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 16px;
+  padding-right: 40px;
+}
+
+.cards-feature-item {
+  border: none;
+}
+
+/* Header bar — neutral warm gray bg, no left border */
+.cards-feature-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  width: 100%;
+  padding: 16px 20px;
+  border: none;
+  background-color: rgb(243 243 240);
+  border-radius: 10px;
+  cursor: default;
+  text-align: left;
+  font-family: var(--body-font-family);
+  margin-bottom: 20px;
+}
+
+/* Icon — no circle bg, just the icon */
+.cards-feature-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  min-width: 36px;
+  border-radius: 0;
+  background-color: transparent;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 32px;
+}
+
+/* Distinct icons per feature */
+.cards-feature-item:nth-child(1) .cards-feature-icon {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none'%3E%3Ccircle cx='12' cy='12' r='9' stroke='%2316837a' stroke-width='1.5'/%3E%3Cpath d='M12 7v10M9 9.5c0-.8.7-1.5 1.5-1.5h1.5c1.1 0 2 .9 2 2s-.9 2-2 2h-1c-1.1 0-2 .9-2 2s.9 2 2 2h1.5c.8 0 1.5-.7 1.5-1.5' stroke='%2316837a' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E");
+}
+
+.cards-feature-item:nth-child(2) .cards-feature-icon {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none'%3E%3Crect x='3' y='6' width='18' height='12' rx='2' stroke='%2316837a' stroke-width='1.5'/%3E%3Cpath d='M3 10h18' stroke='%2316837a' stroke-width='1.5'/%3E%3Cpath d='M7 14h4' stroke='%2316837a' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E");
+}
+
+.cards-feature-item:nth-child(3) .cards-feature-icon {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M12 3l7 4v5c0 4.5-3 8.5-7 10-4-1.5-7-5.5-7-10V7l7-4z' stroke='%2316837a' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M12 8v4M12 15h.01' stroke='%2316837a' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E");
+}
+
+.cards-feature-item:nth-child(4) .cards-feature-icon {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M20 16v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2' stroke='%2316837a' stroke-width='1.5' stroke-linecap='round'/%3E%3Ccircle cx='12' cy='7' r='3' stroke='%2316837a' stroke-width='1.5'/%3E%3Cpath d='M17 20l2 2 3-3' stroke='%2316837a' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+}
+
+.cards-feature-title {
+  flex: 1;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-color);
+}
+
+/* No chevron in this design */
+.cards-feature-chevron {
+  display: none;
+}
+
+/* Panel content — always visible */
+.cards-feature-panel {
+  padding: 0 0 8px;
+}
+
+.cards-feature-panel p {
+  font-size: 14px;
+  line-height: 1.55;
+  color: rgb(60 60 60);
+  margin: 0 0 12px;
+}
+
+.cards-feature-panel p:last-child {
+  margin-bottom: 0;
+}
+
+.cards-feature-panel p strong {
+  display: block;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text-color);
+  margin-top: 16px;
+  margin-bottom: 2px;
+}
+
+.cards-feature-panel p:first-child strong {
+  margin-top: 0;
+}
+
+/* "More +" / "Less -" link styling */
+.cards-feature-panel a {
+  color: rgb(16 131 137);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.cards-feature-panel a:hover {
+  color: rgb(12 100 105);
+}
+
+@media (width >= 900px) {
+  .cards-feature-list {
+    gap: 12px;
+    padding-right: 60px;
+  }
+
+  .cards-feature-header {
+    padding: 16px 24px;
+    gap: 16px;
+  }
+
+  .cards-feature-title {
+    font-size: 17px;
+  }
+
+  .cards-feature-icon {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    background-size: 36px;
+  }
+}

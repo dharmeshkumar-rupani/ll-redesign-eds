@@ -16,42 +16,6 @@
       }
     }
   ],
-  "models": [
-    {
-      "id": "columns-scan",
-      "fields": [
-        {
-          "component": "text",
-          "valueType": "number",
-          "name": "columns",
-          "value": "",
-          "label": "Columns"
-        },
-        {
-          "component": "text",
-          "valueType": "number",
-          "name": "rows",
-          "value": "",
-          "label": "Rows"
-        }
-      ]
-    }
-  ],
-  "filters": [
-    {
-      "id": "columns-scan",
-      "components": [
-        "column"
-      ]
-    },
-    {
-      "id": "column",
-      "components": [
-        "text",
-        "image",
-        "button",
-        "title"
-      ]
-    }
-  ]
+  "models": [],
+  "filters": []
 }

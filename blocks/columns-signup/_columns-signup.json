@@ -1,0 +1,33 @@
+{
+  "definitions": [
+    {
+      "title": "Columns Signup",
+      "id": "columns-signup",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/block/v1/block",
+            "template": {
+              "name": "Columns Signup",
+              "model": "columns-signup"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "models": [
+    {
+      "id": "columns-signup",
+      "fields": [
+        {
+          "component": "richtext",
+          "name": "text",
+          "label": "Signup Content",
+          "valueType": "string"
+        }
+      ]
+    }
+  ],
+  "filters": []
+}

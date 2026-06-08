@@ -1,0 +1,179 @@
+/* Block: cards-xsell */
+.cards-xsell-container > .default-content-wrapper h2 {
+  font-family: var(--heading-font-family);
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--text-color);
+  margin-bottom: 32px;
+}
+
+.cards-xsell > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.cards-xsell > ul > li {
+  display: flex;
+  flex-direction: column;
+  border-radius: 16px;
+  overflow: hidden;
+  background-color: #fff;
+  border: 1px solid rgb(220 220 220);
+}
+
+/* Image section */
+.cards-xsell .cards-xsell-image {
+  position: relative;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+}
+
+.cards-xsell .cards-xsell-image picture {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.cards-xsell .cards-xsell-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Body content - base styles first */
+.cards-xsell .cards-xsell-body {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.cards-xsell .cards-xsell-body h3 {
+  font-family: var(--heading-font-family);
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0 0 8px;
+  color: var(--text-color);
+}
+
+.cards-xsell .cards-xsell-body p {
+  font-size: 15px;
+  line-height: 1.5;
+  color: rgb(80 80 80);
+  margin: 0 0 8px;
+}
+
+.cards-xsell .cards-xsell-price {
+  font-size: 28px;
+  font-weight: 700;
+  margin: 8px 0 16px;
+}
+
+.cards-xsell .cards-xsell-cta a {
+  display: inline-block;
+  padding: 12px 28px;
+  border-radius: 32px;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  border: 1.5px solid rgb(36 36 36);
+  color: rgb(36 36 36);
+  background: transparent;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.cards-xsell .cards-xsell-cta a:hover {
+  background-color: rgb(36 36 36);
+  color: #fff;
+}
+
+/* Dark card variant (LifeLock Total) */
+.cards-xsell > ul > li:first-child {
+  background-color: rgb(20 20 20);
+  border-color: transparent;
+}
+
+.cards-xsell > ul > li:first-child .cards-xsell-body {
+  color: #fff;
+}
+
+.cards-xsell > ul > li:first-child .cards-xsell-body h3 {
+  color: #fff;
+}
+
+.cards-xsell > ul > li:first-child .cards-xsell-body p {
+  color: rgb(200 200 200);
+}
+
+.cards-xsell > ul > li:first-child .cards-xsell-price {
+  color: #fff;
+}
+
+/* stylelint-disable-next-line no-descending-specificity */
+.cards-xsell > ul > li:first-child .cards-xsell-cta a {
+  background-color: #fff;
+  color: rgb(20 20 20);
+  border-color: #fff;
+}
+
+.cards-xsell > ul > li:first-child .cards-xsell-cta a:hover {
+  background-color: rgb(240 240 240);
+}
+
+/* Teal card variant (LifeLock Core) */
+.cards-xsell > ul > li:nth-child(2) {
+  background-color: rgb(120 160 165);
+  border-color: transparent;
+}
+
+.cards-xsell > ul > li:nth-child(2) .cards-xsell-body {
+  color: #fff;
+}
+
+.cards-xsell > ul > li:nth-child(2) .cards-xsell-body h3 {
+  color: #fff;
+}
+
+.cards-xsell > ul > li:nth-child(2) .cards-xsell-body p {
+  color: rgb(230 240 240);
+}
+
+.cards-xsell > ul > li:nth-child(2) .cards-xsell-price {
+  color: #fff;
+}
+
+/* stylelint-disable-next-line no-descending-specificity */
+.cards-xsell > ul > li:nth-child(2) .cards-xsell-cta a {
+  background-color: var(--color-dark);
+  color: #fff;
+  border-color: var(--color-dark);
+}
+
+/* Desktop: side by side */
+@media (width >= 900px) {
+  .cards-xsell-container > .default-content-wrapper h2 {
+    font-size: 40px;
+  }
+
+  .cards-xsell > ul {
+    flex-direction: row;
+    gap: 32px;
+  }
+
+  .cards-xsell > ul > li {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .cards-xsell .cards-xsell-body h3 {
+    font-size: 28px;
+  }
+
+  .cards-xsell .cards-xsell-price {
+    font-size: 32px;
+  }
+}
