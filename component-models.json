@@ -214,8 +214,7 @@
         "component": "richtext",
         "name": "content",
         "label": "Product Content",
-        "valueType": "string",
-        "description": "Product info including title, description, features, pricing, and CTA"
+        "valueType": "string"
       },
       {
         "component": "reference",
