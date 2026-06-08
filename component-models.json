@@ -142,18 +142,20 @@
     ]
   },
   {
-    "id": "accordion",
+    "id": "accordion-item",
     "fields": [
       {
         "component": "text",
-        "name": "heading",
-        "label": "Heading",
-        "valueType": "string"
+        "valueType": "string",
+        "name": "summary",
+        "value": "",
+        "label": "Summary"
       },
       {
         "component": "richtext",
-        "name": "content",
-        "label": "Content",
+        "name": "text",
+        "value": "",
+        "label": "Text",
         "valueType": "string"
       }
     ]

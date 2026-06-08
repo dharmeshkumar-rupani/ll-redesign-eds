@@ -17,5 +17,11 @@
       "columns",
       "fragment"
     ]
+  },
+  {
+    "id": "accordion",
+    "components": [
+      "accordion-item"
+    ]
   }
 ]
