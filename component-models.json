@@ -172,18 +172,20 @@
     ]
   },
   {
-    "id": "cards-xsell",
+    "id": "cards-xsell-item",
     "fields": [
       {
         "component": "reference",
+        "valueType": "string",
         "name": "image",
-        "label": "Card Image",
-        "valueType": "string"
+        "label": "Image",
+        "multi": false
       },
       {
         "component": "richtext",
         "name": "text",
-        "label": "Card Content",
+        "value": "",
+        "label": "Text",
         "valueType": "string"
       }
     ]

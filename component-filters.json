@@ -23,5 +23,11 @@
     "components": [
       "accordion-item"
     ]
+  },
+  {
+    "id": "cards-xsell",
+    "components": [
+      "cards-xsell-item"
+    ]
   }
 ]
