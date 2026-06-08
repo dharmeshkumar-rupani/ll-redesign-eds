@@ -9,7 +9,8 @@
             "resourceType": "core/franklin/components/block/v1/block",
             "template": {
               "name": "Hero Product",
-              "model": "hero-product"
+              "model": "hero-product",
+              "columns": 2
             }
           }
         }
@@ -22,15 +23,17 @@
       "fields": [
         {
           "component": "richtext",
-          "name": "text",
-          "label": "Product Info",
-          "valueType": "string"
+          "name": "content",
+          "label": "Product Content",
+          "valueType": "string",
+          "description": "Product info including title, description, features, pricing, and CTA"
         },
         {
           "component": "reference",
+          "valueType": "string",
           "name": "image",
-          "label": "Product Image",
-          "valueType": "string"
+          "label": "Hero Image",
+          "multi": false
         }
       ]
     }
