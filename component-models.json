@@ -146,8 +146,8 @@
     "fields": [
       {
         "component": "text",
-        "name": "title",
-        "label": "Title",
+        "name": "heading",
+        "label": "Heading",
         "valueType": "string"
       },
       {
