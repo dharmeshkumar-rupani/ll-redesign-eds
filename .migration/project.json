@@ -3,6 +3,10 @@
   "libraryUrl": "https://main--sta-xwalk-boilerplate--aemysites.aem.page/tools/sidekick/library.json",
   "contentHostUrl": "author-p149556-e1749225.adobeaemcloud.com",
   "previewOrg": "dharmeshkumar-rupani",
-  "previewSite": "ll-redesign-eds",
-  "baseUrl": "https://lifelock.norton.com/"
+  "previewSite": "ll-eds-new",
+  "baseUrl": "https://lifelock.norton.com",
+  "aemSitePath": "/content/ll-eds-new",
+  "aemAssetsFolderPath": "/content/dam/ll-eds-new",
+  "aemSiteName": "ll-eds-new",
+  "aemSiteTitle": "ll-eds-new"
 }
