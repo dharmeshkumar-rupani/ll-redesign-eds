@@ -3,10 +3,10 @@
   "libraryUrl": "https://main--sta-xwalk-boilerplate--aemysites.aem.page/tools/sidekick/library.json",
   "contentHostUrl": "author-p149556-e1749225.adobeaemcloud.com",
   "previewOrg": "dharmeshkumar-rupani",
-  "previewSite": "ll-eds-new",
+  "previewSite": "ll-redesign-eds",
   "baseUrl": "https://lifelock.norton.com",
-  "aemSitePath": "/content/ll-eds-new",
-  "aemAssetsFolderPath": "/content/dam/ll-eds-new",
-  "aemSiteName": "ll-eds-new",
-  "aemSiteTitle": "ll-eds-new"
+  "aemSitePath": "/content/ll-redesign-eds",
+  "aemAssetsFolderPath": "/content/dam/ll-redesign-eds",
+  "aemSiteName": "ll-redesign-eds",
+  "aemSiteTitle": "ll-redesign-eds"
 }
