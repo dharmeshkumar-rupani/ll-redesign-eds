@@ -48,16 +48,10 @@
   gap: 0;
 }
 
+/* Indicator replaced by styling the active button directly so the pill
+   sizes to its content (the Annual side is wider due to the save badge). */
 .cards-pricing-toggle-indicator {
-  position: absolute;
-  top: 4px;
-  left: 4px;
-  width: calc(50% - 4px);
-  height: calc(100% - 8px);
-  background-color: #fff;
-  border-radius: 100px;
-  box-shadow: 0 2px 4px rgb(0 0 0 / 10%);
-  transition: transform 0.3s ease;
+  display: none;
 }
 
 .cards-pricing-toggle-btn {
@@ -65,9 +59,10 @@
   z-index: 1;
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 8px;
   padding: 10px 20px;
   border: none;
+  border-radius: 100px;
   background: transparent;
   cursor: pointer;
   font-size: 16px;
@@ -75,22 +70,25 @@
   color: rgb(80 80 80);
   font-family: var(--body-font-family);
   white-space: nowrap;
-  transition: color 0.2s;
+  transition: background-color 0.3s ease, color 0.2s ease;
 }
 
 .cards-pricing-toggle-btn.active {
-  color: rgb(36 36 36);
+  background-color: var(--color-teal);
+  color: #fff;
   font-weight: 600;
+  box-shadow: 0 2px 4px rgb(0 0 0 / 10%);
 }
 
 .cards-pricing-save-badge {
   display: inline-block;
-  background-color: rgb(36 36 36);
-  color: #fff;
+  background-color: var(--color-light);
+  color: var(--color-teal);
   font-size: 12px;
-  font-weight: 700;
-  padding: 3px 8px;
-  border-radius: 4px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 100px;
+  line-height: 1;
 }
 
 /* Cards list */
