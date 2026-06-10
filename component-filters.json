@@ -41,6 +41,12 @@
     ]
   },
   {
+    "id": "cards-pricing",
+    "components": [
+      "cards-pricing-item"
+    ]
+  },
+  {
     "id": "cards-stats",
     "components": [
       "cards-stats-item"
