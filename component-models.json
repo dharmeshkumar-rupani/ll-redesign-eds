@@ -161,6 +161,33 @@
     ]
   },
   {
+    "id": "cards-pricing",
+    "fields": [
+      {
+        "component": "text",
+        "name": "annualLabel",
+        "value": "Annual",
+        "label": "Annual tab label",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "saveBadge",
+        "value": "Save 16%",
+        "label": "Annual save badge",
+        "description": "Small badge shown next to the Annual tab. Leave blank to hide it.",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "monthlyLabel",
+        "value": "Monthly",
+        "label": "Monthly tab label",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
     "id": "cards-pricing-item",
     "fields": [
       {

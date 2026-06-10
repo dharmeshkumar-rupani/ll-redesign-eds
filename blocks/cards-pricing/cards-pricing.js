@@ -1,6 +1,10 @@
 import { moveInstrumentation } from '../../scripts/scripts.js';
 
-function buildToggle(block) {
+function buildToggle(block, config = {}) {
+  const annualLabel = config.annualLabel || 'Annual';
+  const saveBadge = config.saveBadge || 'Save 16%';
+  const monthlyLabel = config.monthlyLabel || 'Monthly';
+
   const toggle = document.createElement('div');
   toggle.className = 'cards-pricing-toggle';
 
@@ -9,11 +13,11 @@ function buildToggle(block) {
 
   const annualBtn = document.createElement('button');
   annualBtn.className = 'cards-pricing-toggle-btn active';
-  annualBtn.innerHTML = '<span class="cards-pricing-toggle-label">Annual</span><span class="cards-pricing-save-badge">Save 16%</span>';
+  annualBtn.innerHTML = `<span class="cards-pricing-toggle-label">${annualLabel}</span>${saveBadge ? `<span class="cards-pricing-save-badge">${saveBadge}</span>` : ''}`;
 
   const monthlyBtn = document.createElement('button');
   monthlyBtn.className = 'cards-pricing-toggle-btn';
-  monthlyBtn.innerHTML = '<span class="cards-pricing-toggle-label">Monthly</span>';
+  monthlyBtn.innerHTML = `<span class="cards-pricing-toggle-label">${monthlyLabel}</span>`;
 
   toggle.append(indicator, annualBtn, monthlyBtn);
 
@@ -39,8 +43,30 @@ function buildToggle(block) {
 export default function decorate(block) {
   block.classList.add('annual');
 
+  const rows = [...block.children];
+
+  // A real plan card always has a heading, feature list, price, or image.
+  // Any leading row(s) without those are optional block-level toggle config:
+  // cells = [annual label, save badge, monthly label].
+  const isCardRow = (row) => row.querySelector('h3, ul, picture, p strong');
+  const config = {};
+  let firstCardIndex = 0;
+  if (rows.length && !isCardRow(rows[0])) {
+    const configCells = [];
+    while (firstCardIndex < rows.length && !isCardRow(rows[firstCardIndex])) {
+      configCells.push(...[...rows[firstCardIndex].children]);
+      firstCardIndex += 1;
+    }
+    const val = (i) => (configCells[i] ? configCells[i].textContent.trim() : '');
+    config.annualLabel = val(0);
+    config.saveBadge = val(1);
+    config.monthlyLabel = val(2);
+    // Remove the consumed config rows so they are not rendered as cards.
+    rows.slice(0, firstCardIndex).forEach((row) => row.remove());
+  }
+
   const ul = document.createElement('ul');
-  [...block.children].forEach((row) => {
+  rows.slice(firstCardIndex).forEach((row) => {
     const li = document.createElement('li');
     moveInstrumentation(row, li);
     while (row.firstElementChild) li.append(row.firstElementChild);
@@ -135,7 +161,7 @@ export default function decorate(block) {
     }
   });
 
-  const toggle = buildToggle(block);
+  const toggle = buildToggle(block, config);
 
   block.textContent = '';
   block.append(toggle, ul);
