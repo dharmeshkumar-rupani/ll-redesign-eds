@@ -161,6 +161,19 @@
     ]
   },
   {
+    "id": "cards-pricing-item",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Plan",
+        "description": "One plan card. Use: Heading 3 = plan name; optional italic line = badge (e.g. Most Popular); bold line = price as \"$10.42/mo | $14.99/mo\" (annual | monthly); a line \"Pay $124.99 today | Pay $14.99 today\"; a bulleted list of features; one or two links = CTA (annual then monthly); optional italic \"Pricing details\" link.",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
     "id": "cards-review",
     "fields": [
       {
