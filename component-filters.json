@@ -25,6 +25,12 @@
     ]
   },
   {
+    "id": "cards-stats",
+    "components": [
+      "cards-stats-item"
+    ]
+  },
+  {
     "id": "cards-xsell",
     "components": [
       "cards-xsell-item"

@@ -172,6 +172,19 @@
     ]
   },
   {
+    "id": "cards-stats-item",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Stat",
+        "description": "Use Heading 3 for the stat number (e.g. $3M, 60 days, 100%) and a paragraph below it for the label.",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
     "id": "cards-xsell-item",
     "fields": [
       {
