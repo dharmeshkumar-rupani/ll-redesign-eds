@@ -361,13 +361,17 @@ header nav .nav-sections .default-content-wrapper > ul > li:last-child {
 
   header nav .nav-sections .default-content-wrapper > ul > li[aria-expanded='true'] > ul {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 220px;
+    grid-template-columns: repeat(3, 230px) 240px;
     grid-auto-flow: column;
+    justify-content: start;
     position: fixed;
     left: 0;
     right: 0;
     top: var(--nav-height);
-    padding: 32px 60px 40px;
+
+    /* full-width white bar, but content aligned to the nav container
+       (max-width 1400px, 40px gutter) so column 1 sits under the logo */
+    padding: 32px max(40px, calc((100% - 1400px) / 2 + 40px)) 40px;
     background-color: #fff;
     border-top: 1px solid rgb(230 230 230);
     box-shadow: 0 8px 32px rgb(0 0 0 / 10%);
@@ -435,9 +439,69 @@ header nav .nav-sections .default-content-wrapper > ul > li:last-child {
     color: rgb(36 36 36);
     display: block;
     margin-bottom: 3px;
+    text-decoration: none;
   }
 
   header nav .nav-sections .default-content-wrapper > ul > li > ul > li a:hover {
+    color: rgb(16 131 137);
+    text-decoration: none;
+  }
+
+  /* rounded gray highlight panel on item hover (matches source) */
+  header nav .nav-sections .default-content-wrapper > ul > li > ul > li.nav-mega-item {
+    padding: 10px 12px;
+    margin: 0 -12px;
+    border-radius: 8px;
+    transition: background-color 0.15s ease;
+  }
+
+  header nav .nav-sections .default-content-wrapper > ul > li > ul > li.nav-mega-item:hover {
+    background-color: var(--color-grey);
+  }
+
+  /* mega-menu item with icon: icon | (title / description) */
+  header nav .nav-sections .default-content-wrapper > ul > li > ul > li.nav-mega-item:has(.icon) {
+    display: grid;
+    grid-template-columns: 24px 1fr;
+    column-gap: 12px;
+    align-items: start;
+  }
+
+  header nav .nav-sections .default-content-wrapper > ul > li > ul > li.nav-mega-item .icon {
+    grid-row: 1 / span 2;
+    width: 24px;
+    height: 24px;
+    margin-top: 1px;
+  }
+
+  header nav .nav-sections .default-content-wrapper > ul > li > ul > li.nav-mega-item .icon svg,
+  header nav .nav-sections .default-content-wrapper > ul > li > ul > li.nav-mega-item .icon img {
+    width: 24px;
+    height: 24px;
+    display: block;
+  }
+
+  header nav .nav-sections .default-content-wrapper > ul > li > ul > li.nav-mega-item > a {
+    grid-column: 2;
+  }
+
+  /* description rendered below the title (replaces the old "- text") */
+  header nav .nav-sections .default-content-wrapper > ul > li > ul > li .nav-item-desc {
+    grid-column: 2;
+    display: block;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.4;
+    color: rgb(100 100 100);
+  }
+
+  /* teal tier accent: the "Core/Advanced/Total" in "LifeLock Core" */
+  header nav .nav-sections .default-content-wrapper > ul > li > ul > li .nav-tier {
+    color: rgb(16 131 137);
+  }
+
+  /* standalone action link (e.g. "Download now") */
+  header nav .nav-sections .default-content-wrapper > ul > li > ul > li.nav-mega-action > a {
     color: rgb(16 131 137);
   }
 
