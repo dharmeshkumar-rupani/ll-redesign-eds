@@ -435,10 +435,24 @@ header nav .nav-sections .default-content-wrapper > ul > li:last-child {
     color: rgb(36 36 36);
     display: block;
     margin-bottom: 3px;
+    text-decoration: none;
   }
 
   header nav .nav-sections .default-content-wrapper > ul > li > ul > li a:hover {
     color: rgb(16 131 137);
+    text-decoration: none;
+  }
+
+  /* rounded gray highlight panel on item hover (matches source) */
+  header nav .nav-sections .default-content-wrapper > ul > li > ul > li.nav-mega-item {
+    padding: 10px 12px;
+    margin: 0 -12px;
+    border-radius: 8px;
+    transition: background-color 0.15s ease;
+  }
+
+  header nav .nav-sections .default-content-wrapper > ul > li > ul > li.nav-mega-item:hover {
+    background-color: var(--color-grey);
   }
 
   /* mega-menu item with icon: icon | (title / description) */
