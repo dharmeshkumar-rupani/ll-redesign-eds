@@ -109,6 +109,68 @@ function toggleMenu(nav, navSections, forceExpanded = null) {
 }
 
 /**
+ * Enhances the desktop mega-menu dropdown items so they match the source:
+ * - splits the trailing " - description" into a styled span (drops the hyphen)
+ * - wraps the tier word in "LifeLock <tier>" links for the teal accent
+ * - tags standalone action links (e.g. "Download now")
+ * Runs defensively; any item it can't parse is left untouched.
+ * @param {Element} navSections The .nav-sections element
+ */
+function decorateMegaMenu(navSections) {
+  if (!navSections) return;
+  const items = navSections.querySelectorAll(
+    ':scope .default-content-wrapper > ul > li > ul > li',
+  );
+  items.forEach((li) => {
+    // Section heading (e.g. "Why LifeLock") - bold-only item
+    if (li.querySelector(':scope > strong:first-child:last-child')) {
+      li.classList.add('nav-mega-heading');
+      return;
+    }
+    const link = li.querySelector(':scope > a');
+    if (!link) {
+      li.classList.add('nav-mega-text');
+      return;
+    }
+    li.classList.add('nav-mega-item');
+
+    // Move any trailing "- description" text into its own span.
+    let descText = '';
+    let node = link.nextSibling;
+    while (node) {
+      const next = node.nextSibling;
+      if (node.nodeType === Node.TEXT_NODE || node.nodeType === Node.ELEMENT_NODE) {
+        descText += node.textContent;
+        node.remove();
+      }
+      node = next;
+    }
+    descText = descText.replace(/^\s*[-–—]\s*/, '').trim();
+    if (descText) {
+      const desc = document.createElement('span');
+      desc.className = 'nav-item-desc';
+      desc.textContent = descText;
+      li.append(desc);
+    } else {
+      li.classList.add('nav-mega-action');
+    }
+
+    // Teal tier accent: "LifeLock Core" -> LifeLock <span>Core</span>
+    if (link.childElementCount === 0) {
+      const m = link.textContent.match(/^(LifeLock)\s+(.+)$/);
+      if (m) {
+        const [, brand, tierName] = m;
+        link.textContent = `${brand} `;
+        const tier = document.createElement('span');
+        tier.className = 'nav-tier';
+        tier.textContent = tierName;
+        link.append(tier);
+      }
+    }
+  });
+}
+
+/**
  * loads and decorates the header, mainly the nav
  * @param {Element} block The header block element
  */
@@ -150,6 +212,7 @@ export default async function decorate(block) {
         }
       });
     });
+    decorateMegaMenu(navSections);
   }
 
   // hamburger for mobile
