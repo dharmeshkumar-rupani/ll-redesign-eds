@@ -368,6 +368,7 @@ header nav .nav-sections .default-content-wrapper > ul > li:last-child {
     left: 0;
     right: 0;
     top: var(--nav-height);
+
     /* full-width white bar, but content aligned to the nav container
        (max-width 1400px, 40px gutter) so column 1 sits under the logo */
     padding: 32px max(40px, calc((100% - 1400px) / 2 + 40px)) 40px;
