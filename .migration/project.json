@@ -5,8 +5,8 @@
   "previewOrg": "dharmeshkumar-rupani",
   "previewSite": "ll-eds-new",
   "baseUrl": "https://lifelock.norton.com",
-  "aemSitePath": "/content/ll-eds-new",
-  "aemAssetsFolderPath": "/content/dam/ll-eds-new",
-  "aemSiteName": "ll-eds-new",
-  "aemSiteTitle": "ll-eds-new"
+  "aemSitePath": "/content/ll-redesign-eds",
+  "aemAssetsFolderPath": "/content/dam/ll-redesign-eds",
+  "aemSiteName": "ll-redesign-eds",
+  "aemSiteTitle": "ll-redesign-eds"
 }

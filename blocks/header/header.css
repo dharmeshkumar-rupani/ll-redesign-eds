@@ -328,6 +328,19 @@ header nav .nav-sections .default-content-wrapper > ul > li:last-child {
     color: rgb(16 131 137);
   }
 
+  /* Active top-level item (expanded dropdown) gets a teal pill */
+  header nav .nav-sections .default-content-wrapper > ul > li.nav-drop[aria-expanded='true'] {
+    color: rgb(16 131 137);
+    background-color: rgb(232 246 246);
+    border-radius: 100px;
+    padding: 8px 16px;
+    margin: -8px 0;
+  }
+
+  header nav .nav-sections .default-content-wrapper > ul > li.nav-drop[aria-expanded='true']::after {
+    border-color: rgb(16 131 137);
+  }
+
   /* nav-drop chevron */
   header nav .nav-sections .nav-drop {
     padding-right: 20px;
@@ -380,10 +393,67 @@ header nav .nav-sections .default-content-wrapper > ul > li:last-child {
   /* All items span full row in their column */
   header nav .nav-sections .default-content-wrapper > ul > li > ul > li {
     grid-column: 1;
-    padding: 10px 0;
+    padding: 10px 0 10px 40px;
     font-size: 13px;
     line-height: 1.5;
     color: rgb(100 100 100);
+    position: relative;
+  }
+
+  /* Item icon (left column) for items with a description span */
+  header nav .nav-sections .default-content-wrapper > ul > li > ul > li:has(> a):has(> span)::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 10px;
+    width: 24px;
+    height: 24px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 22px;
+  }
+
+  /* Distinct icons per item, matched by destination href */
+  header nav .nav-sections li > ul > li:has(a[href$="how-it-works"])::before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M12 3l7 3v5c0 4.4-3 8.3-7 9.5C8 19.3 5 15.4 5 11V6l7-3z' stroke='%23103638' stroke-width='1.5' stroke-linejoin='round'/%3E%3Cpath d='M9 12l2 2 4-4' stroke='%23103638' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  }
+
+  header nav .nav-sections li > ul > li:has(a[href*="credit-monitoring"])::before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none'%3E%3Crect x='3' y='6' width='18' height='12' rx='2' stroke='%23103638' stroke-width='1.5'/%3E%3Cpath d='M3 10h18' stroke='%23103638' stroke-width='1.5'/%3E%3Cpath d='M7 14h4' stroke='%23103638' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E");
+  }
+
+  header nav .nav-sections li > ul > li:has(a[href*="identity-monitoring"])::before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M2 12s3.5-6 10-6 10 6 10 6-3.5 6-10 6-10-6-10-6z' stroke='%23103638' stroke-width='1.5' stroke-linejoin='round'/%3E%3Ccircle cx='12' cy='12' r='2.5' stroke='%23103638' stroke-width='1.5'/%3E%3C/svg%3E");
+  }
+
+  header nav .nav-sections li > ul > li:has(a[href*="best-protection"])::before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M12 3l7 3v5c0 4.4-3 8.3-7 9.5C8 19.3 5 15.4 5 11V6l7-3z' stroke='%23103638' stroke-width='1.5' stroke-linejoin='round'/%3E%3Ccircle cx='12' cy='11' r='2.5' stroke='%23103638' stroke-width='1.5'/%3E%3C/svg%3E");
+  }
+
+  header nav .nav-sections li > ul > li:has(a[href*="family-plans"])::before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none'%3E%3Ccircle cx='8' cy='8' r='2.5' stroke='%23103638' stroke-width='1.5'/%3E%3Ccircle cx='16' cy='8' r='2.5' stroke='%23103638' stroke-width='1.5'/%3E%3Cpath d='M3 19c0-2.8 2.2-5 5-5s5 2.2 5 5M13 19c0-2.8 2.2-5 5-5s3 1 3 1' stroke='%23103638' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E");
+  }
+
+  header nav .nav-sections li > ul > li:has(a[href*="cyber-safety-plans"])::before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none'%3E%3Crect x='3' y='3' width='7' height='7' rx='1.5' stroke='%23103638' stroke-width='1.5'/%3E%3Crect x='14' y='3' width='7' height='7' rx='1.5' stroke='%23103638' stroke-width='1.5'/%3E%3Crect x='3' y='14' width='7' height='7' rx='1.5' stroke='%23103638' stroke-width='1.5'/%3E%3Crect x='14' y='14' width='7' height='7' rx='1.5' stroke='%23103638' stroke-width='1.5'/%3E%3C/svg%3E");
+  }
+
+  header nav .nav-sections li > ul > li:has(a[href*="home-title-protect"])::before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M4 11l8-6 8 6' stroke='%23103638' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M6 10v9h12v-9' stroke='%23103638' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  }
+
+  /* Description line under the title */
+  header nav .nav-sections .default-content-wrapper > ul > li > ul > li > span {
+    display: block;
+    color: rgb(100 100 100);
+    font-size: 13px;
+    line-height: 1.45;
+  }
+
+  /* Teal tier words (Core / Advanced / Total) */
+  header nav .nav-sections .default-content-wrapper > ul > li > ul > li a em {
+    color: rgb(16 131 137);
+    font-style: normal;
   }
 
   /* Section headings in mega-menu - force new column */
@@ -397,6 +467,11 @@ header nav .nav-sections .default-content-wrapper > ul > li:last-child {
     margin-top: 0;
     border-bottom: 1px solid rgb(220 220 220);
     margin-bottom: 4px;
+  }
+
+  /* headings never get an icon offset */
+  header nav .nav-sections .default-content-wrapper > ul > li > ul > li:has(> strong:first-child:last-child)::before {
+    display: none;
   }
 
   /* 2nd section heading starts column 2 */
@@ -439,6 +514,26 @@ header nav .nav-sections .default-content-wrapper > ul > li:last-child {
 
   header nav .nav-sections .default-content-wrapper > ul > li > ul > li a:hover {
     color: rgb(16 131 137);
+  }
+
+  /* "LifeLock app" promo column (4th heading + following items) tinted box */
+  header nav .nav-sections li > ul > li:has(> strong:first-child:last-child) ~ li:has(> strong:first-child:last-child) ~ li:has(> strong:first-child:last-child) ~ li:has(> strong:first-child:last-child),
+  header nav .nav-sections li > ul > li:has(> strong:first-child:last-child) ~ li:has(> strong:first-child:last-child) ~ li:has(> strong:first-child:last-child) ~ li:has(> strong:first-child:last-child) ~ li {
+    background-color: rgb(250 247 240);
+    grid-column: 4;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  header nav .nav-sections li > ul > li:has(> strong:first-child:last-child) ~ li:has(> strong:first-child:last-child) ~ li:has(> strong:first-child:last-child) ~ li:has(> strong:first-child:last-child) {
+    padding-top: 24px;
+    border-radius: 12px 12px 0 0;
+    border-bottom: none;
+  }
+
+  header nav .nav-sections li > ul > li:has(> strong:first-child:last-child) ~ li:has(> strong:first-child:last-child) ~ li:has(> strong:first-child:last-child) ~ li:has(> strong:first-child:last-child) ~ li:last-child {
+    padding-bottom: 24px;
+    border-radius: 0 0 12px 12px;
   }
 
 }
