@@ -1,7 +1,6 @@
 /* Block: columns-scan
- * Two-column scan/CTA block with gradient background.
- * Left column: heading, description, email CTA, legal text.
- * Right column: illustration image.
+ * Centered "Is your info exposed?" scan form on a warm gradient background.
+ * Single centered column: heading, lede, pill email+Scan input, legal, opt-in.
  */
 
 /* Wrapper: full-width gradient background */
@@ -13,73 +12,101 @@
 .columns-scan {
   background-image: linear-gradient(318deg, rgb(232 225 207) -0.45%, rgb(248 246 241 / 60%) 53.58%, rgb(248 246 241) 88.97%);
   color: rgb(22 22 22);
-  padding: 48px 24px;
+  padding: 64px 24px;
   overflow: hidden;
-  border-radius: var(--border-radius);
 }
 
-/* Row layout: stack on mobile */
+/* Single centered column */
 .columns-scan > div {
+  max-width: 640px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: 32px;
 }
 
-/* Cell base */
 .columns-scan > div > div {
-  order: 1;
-}
-
-/* Image cell on top for mobile */
-.columns-scan > div > .columns-scan-img-col {
-  order: 0;
-}
-
-/* Text cell (left column) */
-.columns-scan > div > div:not(.columns-scan-img-col) {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  align-items: center;
+  text-align: center;
+  gap: 12px;
 }
 
-/* Headings */
+/* Heading */
 .columns-scan h2 {
   font-size: 32px;
-  font-weight: 500;
-  font-family: var(--body-font-family);
-  line-height: 1.2;
-  letter-spacing: 0.9px;
-  color: var(--text-color);
-  margin: 0;
-}
-
-.columns-scan h3 {
-  font-size: 28px;
   font-weight: 600;
   font-family: var(--body-font-family);
-  line-height: 1;
-  letter-spacing: 0.44px;
+  line-height: 1.2;
   color: var(--text-color);
   margin: 0;
 }
 
-/* Paragraphs */
-.columns-scan p {
-  font-size: 18px;
+/* Lede */
+.columns-scan h2 + p {
+  font-size: 16px;
   font-family: var(--body-font-family);
-  line-height: 26px;
-  color: var(--text-color);
-  margin: 0;
+  line-height: 24px;
+  color: rgb(60 60 60);
+  margin: 0 0 12px;
 }
 
-/* Legal / small text (last paragraphs) */
-.columns-scan > div > div:not(.columns-scan-img-col) p:nth-child(n+4) {
+/* Pill input row: email field + inline Scan button */
+.columns-scan-form {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 460px;
+  background-color: #fff;
+  border: 1px solid rgb(220 218 212);
+  border-radius: 100px;
+  padding: 6px 6px 6px 20px;
+  box-shadow: 0 1px 3px rgb(0 0 0 / 6%);
+}
+
+.columns-scan-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-family: var(--body-font-family);
+  font-size: 16px;
+  color: var(--text-color);
+  min-width: 0;
+}
+
+.columns-scan-input::placeholder {
+  color: rgb(120 120 120);
+}
+
+.columns-scan-submit {
+  flex-shrink: 0;
+  background-color: rgb(47 48 60);
+  color: #fff;
+  border: none;
+  border-radius: 100px;
+  padding: 12px 28px;
+  font-family: var(--body-font-family);
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.columns-scan-submit:hover {
+  background-color: rgb(30 31 40);
+}
+
+/* Legal text */
+/* stylelint-disable-next-line no-descending-specificity */
+.columns-scan-form + p {
   font-size: 12px;
   line-height: 18px;
   color: rgb(96 126 149);
+  margin: 8px 0 0;
+  max-width: 520px;
 }
 
-/* Links in legal area */
 .columns-scan a:any-link {
   color: rgb(96 126 149);
   font-size: 12px;
@@ -87,60 +114,41 @@
   text-decoration: underline;
 }
 
-/* Primary CTA button */
-main .columns-scan a.button:any-link {
-  background-color: rgb(47 48 60);
-  color: rgb(255 255 255);
-  padding: 16px 24px;
-  border: none;
-  border-radius: 100px;
-  font-size: 18px;
-  font-weight: 500;
-  text-decoration: none;
-  display: inline-block;
+/* Opt-in checkbox row */
+.columns-scan-optin {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
   cursor: pointer;
-  transition: background-color 0.2s;
 }
 
-main .columns-scan a.button:hover {
-  background-color: rgb(30 31 40);
-  text-decoration: none;
+.columns-scan-optin-input {
+  width: 16px;
+  height: 16px;
+  accent-color: rgb(16 131 137);
+  cursor: pointer;
 }
 
-/* Images */
-.columns-scan img {
-  width: 100%;
-  height: auto;
-  display: block;
+.columns-scan-optin-label {
+  font-size: 12px;
+  line-height: 18px;
+  color: rgb(96 126 149);
 }
 
-.columns-scan > div > .columns-scan-img-col img {
-  border-radius: var(--border-radius);
-}
-
-/* Desktop layout */
+/* Desktop */
 @media (width >= 900px) {
   .columns-scan {
     padding: 80px 64px;
   }
 
-  .columns-scan > div {
-    flex-direction: row;
-    align-items: center;
-    gap: 48px;
-  }
-
-  .columns-scan > div > div {
-    flex: 1;
-    order: unset;
-  }
-
-  .columns-scan > div > .columns-scan-img-col {
-    order: unset;
-  }
-
   .columns-scan h2 {
-    font-size: 44px;
-    line-height: 52px;
+    font-size: 40px;
+    line-height: 48px;
+  }
+
+  .columns-scan h2 + p {
+    font-size: 18px;
+    line-height: 26px;
   }
 }
