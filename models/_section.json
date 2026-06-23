@@ -47,10 +47,26 @@
         "image",
         "button",
         "title",
-        "hero",
+        "fragment",
+        "accordion",
         "cards",
+        "cards-article",
+        "cards-feature",
+        "cards-pricing",
+        "cards-review",
+        "cards-stats",
+        "cards-xsell",
+        "carousel-awards",
+        "carousel-testimonial",
         "columns",
-        "fragment"
+        "columns-appbanner",
+        "columns-quiz",
+        "columns-scan",
+        "columns-signup",
+        "hero",
+        "hero-lifestyle",
+        "hero-product",
+        "tabs-feature"
       ]
     }
   ]

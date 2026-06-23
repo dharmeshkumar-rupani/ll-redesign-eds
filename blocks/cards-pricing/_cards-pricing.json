@@ -8,13 +8,78 @@
           "page": {
             "resourceType": "core/franklin/components/block/v1/block",
             "template": {
-              "name": "Cards Pricing"
+              "name": "Cards Pricing",
+              "model": "cards-pricing",
+              "filter": "cards-pricing"
+            }
+          }
+        }
+      }
+    },
+    {
+      "title": "Cards Pricing Item",
+      "id": "cards-pricing-item",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/block/v1/block/item",
+            "template": {
+              "name": "Cards Pricing Item",
+              "model": "cards-pricing-item"
             }
           }
         }
       }
     }
   ],
-  "models": [],
-  "filters": []
+  "models": [
+    {
+      "id": "cards-pricing",
+      "fields": [
+        {
+          "component": "text",
+          "name": "annualLabel",
+          "value": "Annual",
+          "label": "Annual tab label",
+          "valueType": "string"
+        },
+        {
+          "component": "text",
+          "name": "saveBadge",
+          "value": "Save 16%",
+          "label": "Annual save badge",
+          "description": "Small badge shown next to the Annual tab. Leave blank to hide it.",
+          "valueType": "string"
+        },
+        {
+          "component": "text",
+          "name": "monthlyLabel",
+          "value": "Monthly",
+          "label": "Monthly tab label",
+          "valueType": "string"
+        }
+      ]
+    },
+    {
+      "id": "cards-pricing-item",
+      "fields": [
+        {
+          "component": "richtext",
+          "name": "text",
+          "value": "",
+          "label": "Plan",
+          "description": "One plan card. Use: Heading 3 = plan name; optional italic line = badge (e.g. Most Popular); bold line = price as \"$10.42/mo | $14.99/mo\" (annual | monthly); a line \"Pay $124.99 today | Pay $14.99 today\"; a bulleted list of features; one or two links = CTA (annual then monthly); optional italic \"Pricing details\" link.",
+          "valueType": "string"
+        }
+      ]
+    }
+  ],
+  "filters": [
+    {
+      "id": "cards-pricing",
+      "components": [
+        "cards-pricing-item"
+      ]
+    }
+  ]
 }

@@ -161,12 +161,65 @@
     ]
   },
   {
+    "id": "cards-pricing",
+    "fields": [
+      {
+        "component": "text",
+        "name": "annualLabel",
+        "value": "Annual",
+        "label": "Annual tab label",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "saveBadge",
+        "value": "Save 16%",
+        "label": "Annual save badge",
+        "description": "Small badge shown next to the Annual tab. Leave blank to hide it.",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "monthlyLabel",
+        "value": "Monthly",
+        "label": "Monthly tab label",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "cards-pricing-item",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Plan",
+        "description": "One plan card. Use: Heading 3 = plan name; optional italic line = badge (e.g. Most Popular); bold line = price as \"$10.42/mo | $14.99/mo\" (annual | monthly); a line \"Pay $124.99 today | Pay $14.99 today\"; a bulleted list of features; one or two links = CTA (annual then monthly); optional italic \"Pricing details\" link.",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
     "id": "cards-review",
     "fields": [
       {
         "component": "richtext",
         "name": "text",
         "label": "Review Content",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "cards-stats-item",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Stat",
+        "description": "Use Heading 3 for the stat number (e.g. $3M, 60 days, 100%) and a paragraph below it for the label.",
         "valueType": "string"
       }
     ]
@@ -208,6 +261,32 @@
         "component": "aem-content",
         "name": "reference",
         "label": "Reference"
+      }
+    ]
+  },
+  {
+    "id": "hero-lifestyle",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Background image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "imageAlt",
+        "label": "Background image alt text",
+        "value": ""
+      },
+      {
+        "component": "richtext",
+        "name": "content",
+        "label": "Content",
+        "description": "Heading (use Heading 1), a short paragraph, then two links: make the primary CTA bold (e.g. See plans) and the secondary a plain link (e.g. How it works).",
+        "valueType": "string"
       }
     ]
   },
