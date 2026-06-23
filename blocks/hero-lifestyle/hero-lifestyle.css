@@ -116,7 +116,7 @@ main .hero-lifestyle a.button.primary:hover {
 }
 
 /* Secondary CTA (How it works) - outlined white */
-.hero-lifestyle .hero-lifestyle-ctas > p:not(.button-wrapper) > a:any-link {
+main .hero-lifestyle a.button.secondary:any-link {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -134,7 +134,7 @@ main .hero-lifestyle a.button.primary:hover {
   transition: background-color 0.2s, border-color 0.2s;
 }
 
-.hero-lifestyle .hero-lifestyle-ctas > p:not(.button-wrapper) > a:hover {
+main .hero-lifestyle a.button.secondary:hover {
   background-color: rgb(255 255 255 / 10%);
   text-decoration: none;
 }
@@ -159,6 +159,29 @@ main .hero-lifestyle a.button.primary:hover {
 .hero-lifestyle > div:last-child > div > p:last-child img {
   height: 24px;
   width: auto;
+  object-fit: contain;
+}
+
+/* Disclaimer line: "16M+ members protected" with small inline icon */
+.hero-lifestyle .hero-lifestyle-disclaimer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  line-height: 1.4;
+  color: rgb(255 255 255 / 90%);
+}
+
+/* stylelint-disable-next-line no-descending-specificity */
+.hero-lifestyle .hero-lifestyle-disclaimer picture {
+  display: inline-flex;
+  flex-shrink: 0;
+}
+
+/* stylelint-disable-next-line no-descending-specificity */
+.hero-lifestyle > div:last-child > div > p.hero-lifestyle-disclaimer img {
+  width: 18px;
+  height: 18px;
   object-fit: contain;
 }
 
